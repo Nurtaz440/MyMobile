@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.user.home.HomeFragment"
+    >
+
+    <TextView
+        android:id="@+id/tv_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/uzmobile"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_item"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="16dp"
+        android:visibility="visible"
+        app:cardBackgroundColor="@color/deep_sky_blue_100"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_main"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="60dp"
+            app:srcCompat="@drawable/ic_uzmobile_logo"
+            tools:ignore="ContentDescription"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_call"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="24dp"
+            app:cardCornerRadius="16dp"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="16dp"
+                app:srcCompat="@drawable/ic_call"
+                tools:ignore="ContentDescription"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/call_center"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="23dp"
+                android:text="@string/call_center_number"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_balans"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="130dp"
+            android:layout_marginEnd="24dp"
+            app:cardCornerRadius="16dp"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="16dp"
+                app:srcCompat="@drawable/ic_wallet"
+                tools:ignore="ContentDescription"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="18dp"
+                android:text="@string/balans"
+                android:textColor="@color/black"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_item2"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="16dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/alizarin_100"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_main"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="60dp"
+            app:srcCompat="@drawable/ic_mobiuz_logo"
+            tools:ignore="ContentDescription"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_call_red"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="24dp"
+            app:cardCornerRadius="16dp"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="16dp"
+                app:srcCompat="@drawable/ic_call"
+                app:tint="@color/alizarin_700"
+                tools:ignore="ContentDescription"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/call_center"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="23dp"
+                android:text="@string/call_center_number"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_balans_red"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="130dp"
+            android:layout_marginEnd="24dp"
+            app:cardCornerRadius="16dp"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="16dp"
+                app:srcCompat="@drawable/ic_wallet"
+                app:tint="@color/alizarin_700"
+                tools:ignore="ContentDescription"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="18dp"
+                android:text="@string/balans"
+                android:textColor="@color/black"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_item3"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="16dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/vivid_violet_100"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_main"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="60dp"
+            app:srcCompat="@drawable/ic_ucell_logo"
+            tools:ignore="ContentDescription"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_call_violet"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="24dp"
+            app:cardCornerRadius="16dp"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="16dp"
+                app:srcCompat="@drawable/ic_call"
+                app:tint="@color/vivid_violet_800"
+                tools:ignore="ContentDescription"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/call_center"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="23dp"
+                android:text="@string/call_center_number"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_balans_violet"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="130dp"
+            android:layout_marginEnd="24dp"
+            app:cardCornerRadius="16dp"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="16dp"
+                app:srcCompat="@drawable/ic_wallet"
+                app:tint="@color/vivid_violet_800"
+                tools:ignore="ContentDescription"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="18dp"
+                android:text="@string/balans"
+                android:textColor="@color/black"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_item4"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="16dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/gorse_100"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_main"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="60dp"
+            app:srcCompat="@drawable/ic_beeline_logo"
+            tools:ignore="ContentDescription"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_call_yellow"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="24dp"
+            app:cardCornerRadius="16dp"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="16dp"
+                app:srcCompat="@drawable/ic_call"
+                app:tint="@color/gorse_600"
+                tools:ignore="ContentDescription"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/call_center"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="23dp"
+                android:text="@string/call_center_number"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_balans_yellow"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="130dp"
+            android:layout_marginEnd="24dp"
+            app:cardCornerRadius="16dp"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="16dp"
+                app:srcCompat="@drawable/ic_wallet"
+                app:tint="@color/gorse_600"
+                tools:ignore="ContentDescription"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="18dp"
+                android:text="@string/balans"
+                android:textColor="@color/black"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

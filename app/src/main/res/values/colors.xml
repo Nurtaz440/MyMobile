@@ -7,4 +7,15 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Card view color -->
+    <color name="deep_sky_blue_100">#B0E3F9</color>
+    <color name="alizarin_100">#FFCDD2</color>
+    <color name="vivid_violet_100">#E0BEE0</color>
+    <color name="gorse_100">#FDFBC3</color>
+
+    <!-- Card view color -->
+    <color name="alizarin_700">#E31E24</color>
+    <color name="vivid_violet_800">#6A2383</color>
+    <color name="gorse_600">#FBDE25</color>
 </resources>
