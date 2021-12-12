@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             app:defaultNavHost="true"
-            app:layout_constraintBottom_toTopOf="@+id/partial_bottom_nav_controller"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/appBarLayout"
             app:navGraph="@navigation/main"
             />
@@ -55,12 +55,6 @@
         </com.google.android.material.appbar.AppBarLayout>
 
 
-
-        <include
-            android:id="@+id/partial_bottom_nav_controller"
-            layout="@layout/bottom_nav_controller"
-            app:layout_constraintBottom_toBottomOf="parent"
-            />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
