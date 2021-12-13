@@ -10,4 +10,34 @@
         android:name="mening.dasturim.mymobile.ui.main.user.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/internetPocketsFragment"
+        android:name="mening.dasturim.mymobile.ui.main.user.internet.InternetPocketsFragment"
+        android:label="fragment_internet_pockets"
+        tools:layout="@layout/fragment_internet_pockets" />
+    <fragment
+        android:id="@+id/messageFragment"
+        android:name="mening.dasturim.mymobile.ui.main.user.message.MessageFragment"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message" />
+    <fragment
+        android:id="@+id/minutesFragment"
+        android:name="mening.dasturim.mymobile.ui.main.user.minuts.MinutesFragment"
+        android:label="fragment_minuts"
+        tools:layout="@layout/fragment_minuts" />
+    <fragment
+        android:id="@+id/rateFragment"
+        android:name="mening.dasturim.mymobile.ui.main.user.rate.RateFragment"
+        android:label="fragment_rate"
+        tools:layout="@layout/fragment_rate" />
+    <fragment
+        android:id="@+id/servicesFragment"
+        android:name="mening.dasturim.mymobile.ui.main.user.services.ServicesFragment"
+        android:label="fragment_services"
+        tools:layout="@layout/fragment_services" />
+    <fragment
+        android:id="@+id/USSDFragment"
+        android:name="mening.dasturim.mymobile.ui.main.user.ussd.USSDFragment"
+        android:label="fragment_u_s_s_d"
+        tools:layout="@layout/fragment_u_s_s_d" />
 </navigation>

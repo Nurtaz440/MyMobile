@@ -41,17 +41,38 @@
             app:layout_constraintTop_toTopOf="parent"
             >
 
-            <TextView
-                android:id="@+id/tv_uzmobile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="11dp"
-                android:text="@string/uzmobile"
-                android:textColor="@color/black"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+
+                <ImageView
+                    android:id="@+id/iv_back_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_back_arrow"
+                    tools:ignore="ContentDescription"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="80dp"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.appbar.AppBarLayout>
 
 

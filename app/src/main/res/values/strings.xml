@@ -20,10 +20,21 @@
     <string name="balans">Balans</string>
     <string name="call_center_number">1084</string>
 
+    <!--text of mobiuz  -->
+    <string name="call_center_number_mobiuz">0870</string>
+
+    <!--text of ucell  -->
+    <string name="call_center_number_ucell">8123</string>
+
+    <!--text of beeline  -->
+    <string name="call_center_number_beeline">0639</string>
+
     <!-- TODO: Remove or change this placeholder text -->
+
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="xizmatlar">Xizmatlar</string>
-    <string name="ussd_kpdlar">USSD kpdlar</string>
+    <string name="ussd_kodlar">USSD kodlar</string>
     <string name="sms_paketlar">SMS paketlar</string>
     <string name="internet_paketlar">Internet paketlar</string>
     <string name="tariflar">Tariflar</string>
