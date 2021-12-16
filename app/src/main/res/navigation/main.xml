@@ -40,4 +40,19 @@
         android:name="mening.dasturim.mymobile.ui.main.user.ussd.USSDFragment"
         android:label="fragment_u_s_s_d"
         tools:layout="@layout/fragment_u_s_s_d" />
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="mening.dasturim.mymobile.ui.main.user.account.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="mening.dasturim.mymobile.ui.main.user.notification.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="mening.dasturim.mymobile.ui.main.user.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
 </navigation>

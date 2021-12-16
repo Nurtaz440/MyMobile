@@ -21,33 +21,31 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainVM>() {
     }
 
     fun setUp() {
+
         val navHost = supportFragmentManager.findFragmentById(R.id.partial_nav_controller)
         if (navHost != null) {
             navController = navHost.findNavController()
         }
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
-
-            if (destination.id == R.id.rateFragment ||
-                destination.id == R.id.internetPocketsFragment ||
-                destination.id == R.id.messageFragment ||
-                destination.id == R.id.servicesFragment ||
-                destination.id == R.id.USSDFragment ||
-                destination.id == R.id.minutesFragment
+            if (destination.id == R.id.homeFragment
             ) {
-                ViewUtils.fadeIn(binding.appBarLayout)
+                ViewUtils.fadeOut(binding.appBarLayout)
 
             } else {
-                ViewUtils.fadeOut(binding.appBarLayout)
+                ViewUtils.fadeIn(binding.appBarLayout)
             }
 
             when (destination.id) {
-                R.id.rateFragment->binding.tvInfo.setText(R.string.tariflar)
-                R.id.internetPocketsFragment->binding.tvInfo.setText(R.string.internet_paketlar)
-                R.id.minutesFragment->binding.tvInfo.setText(R.string.daqiqalar)
-                R.id.messageFragment->binding.tvInfo.setText(R.string.sms_paketlar)
-                R.id.USSDFragment->binding.tvInfo.setText(R.string.ussd_kodlar)
-                R.id.servicesFragment->binding.tvInfo.setText(R.string.xizmatlar)
+                R.id.rateFragment -> binding.tvInfo.setText(R.string.tariflar)
+                R.id.internetPocketsFragment -> binding.tvInfo.setText(R.string.internet_paketlar)
+                R.id.minutesFragment -> binding.tvInfo.setText(R.string.daqiqalar)
+                R.id.messageFragment -> binding.tvInfo.setText(R.string.sms_paketlar)
+                R.id.USSDFragment -> binding.tvInfo.setText(R.string.ussd_kodlar)
+                R.id.servicesFragment -> binding.tvInfo.setText(R.string.xizmatlar)
+                R.id.accountFragment -> binding.tvInfo.setText(R.string.account)
+                R.id.notificationFragment -> binding.tvInfo.setText(R.string.notify)
+                R.id.settingsFragment -> binding.tvInfo.setText(R.string.settings)
             }
         }
         binding.ivBackArrow.setOnClickListener { onBackPressed() }
@@ -62,21 +60,12 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainVM>() {
     override fun setStatusBarBackgroundHeight(statusBarBackground: View) {
 
     }
+
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
     override fun onBackPressed() {
-
-//        if (navController.currentDestination!!.id == R.id.rateFragment ||
-//            navController.currentDestination!!.id== R.id.internetPocketsFragment ||
-//            navController.currentDestination!!.id == R.id.messageFragment ||
-//            navController.currentDestination!!.id == R.id.servicesFragment ||
-//            navController.currentDestination!!.id == R.id.USSDFragment ||
-//            navController.currentDestination!!.id == R.id.minutesFragment
-//        ) {
-//            navController.popBackStack(R.id.homeFragment,false)
-//        }
         super.onBackPressed()
 
     }

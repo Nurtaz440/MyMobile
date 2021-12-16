@@ -4,19 +4,43 @@ import android.content.Intent
 import android.net.Uri
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import mening.dasturim.mymobile.R
 import mening.dasturim.mymobile.data.constants.Constants
 import mening.dasturim.mymobile.databinding.FragmentHomeBinding
 import mening.dasturim.mymobile.ui.base.BaseFragment
+import mening.dasturim.mymobile.ui.main.BottomNavController
 import mening.dasturim.mymobile.utils.ViewUtils
 
 class HomeFragment : BaseFragment<FragmentHomeBinding, HomeVM>() {
+    private lateinit var bottomNavController:BottomNavController
+    private lateinit var navController: NavController
     override fun onBound() {
         setUp()
     }
 
     fun setUp() {
+
+        val navHost = fragmentManager?.findFragmentById(R.id.partial_nav_controller)
+        if (navHost != null) {
+            navController = navHost.findNavController()
+        }
+        bottomNavController=BottomNavController(binding,binding.partialBottomNavController,this,navController)
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+
+            if (destination.id == R.id.homeFragment ||
+                destination.id == R.id.accountFragment ||
+                destination.id == R.id.notificationFragment ||
+                destination.id == R.id.settingsFragment
+            ) {
+                ViewUtils.fadeIn(binding.partialBottomNavController.root)
+            } else {
+                ViewUtils.fadeOut(binding.partialBottomNavController.root)
+            }
+
+        }
 
         //navigate Uzmobile
         binding.cvIconBlue.setOnClickListener {

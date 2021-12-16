@@ -4,11 +4,20 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/bg_cv.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/bg_tab_rect.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/ic_account.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/ic_beeline_logo.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/tab_selected.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/activity_main.xml" value="0.16259057971014493" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/bottom_nav_controller.xml" value="0.203125" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_account2.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_minuts.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_notification2.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_rate.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_u_n_i_t_s.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/item_units.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/item_viewpager.xml" value="0.203125" />
       </map>
     </option>
   </component>

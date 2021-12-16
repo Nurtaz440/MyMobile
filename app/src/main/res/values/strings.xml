@@ -40,4 +40,27 @@
     <string name="tariflar">Tariflar</string>
     <string name="daqiqalar">Daqiqalar</string>
 
+    <string name="account">AccountFragment</string>
+    <string name="notify">NotificationFragment</string>
+    <string name="settings">SettingsFragment</string>
+
+    <!--text of rate -->
+    <string name="units">UNITS</string>
+    <string name="milliy">Milliy</string>
+    <string name="imtiyozlar">Imtiyozlar</string>
+    <string name="m2m">M2M</string>
+
+    <!--text of UNITS -->
+    <string name="units1">UNITS 700</string>
+    <string name="units2">UNITS 1500</string>
+    <string name="units3">UNITS 4000</string>
+    <string name="units4">UNITS 8000</string>
+    <string name="units5">UNITS 11000</string>
+    <string name="units6">UNITS 14000</string>
+    <string name="units7">UNITS 18000</string>
+    <string name="units8">UNITS 22000</string>
+    <string name="units9">UNITS 30000</string>
+    <string name="units10">UNITS 40000</string>
+    <string name="units11">UNITS 55000</string>
+    <string name="units12">UNITS 90000</string>
 </resources>

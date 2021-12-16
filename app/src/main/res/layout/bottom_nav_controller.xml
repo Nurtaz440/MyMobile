@@ -22,8 +22,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_marginStart="32dp"
                 >
                 <ImageView
@@ -44,9 +44,9 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="90dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="50dp"
                 >
                 <ImageView
                     android:id="@+id/iv_account"
@@ -66,9 +66,9 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="90dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="50dp"
                 >
                 <ImageView
                     android:id="@+id/iv_notification"
@@ -88,9 +88,9 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="90dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="50dp"
                 >
                 <ImageView
                     android:id="@+id/iv_settings"
