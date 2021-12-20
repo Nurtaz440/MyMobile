@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/bg_app_bar.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/bg_cv.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/bg_tab_rect.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/ic_account.xml" value="0.21927083333333333" />
@@ -13,9 +14,11 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_account2.xml" value="0.203125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_minuts.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_nation.xml" value="0.203125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_notification2.xml" value="0.203125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_rate.xml" value="0.203125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_u_n_i_t_s.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/item_nation.xml" value="0.203125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/item_units.xml" value="0.203125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/item_viewpager.xml" value="0.203125" />
       </map>

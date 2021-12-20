@@ -34,12 +34,12 @@
                 >
 
                 <TextView
-                    android:id="@+id/tv_units_name"
+                    android:id="@+id/tv_nation_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="16dp"
-                    android:text="@string/units1"
+                    android:text="@string/milliy1"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     />
@@ -95,38 +95,38 @@
 
                 >
 
-            <TextView
-                android:id="@+id/tv_units_name2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="16dp"
-                android:text="@string/units1"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                />
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/cl_arrow_up"
-                android:layout_width="50dp"
-                android:layout_height="40dp"
-                android:layout_gravity="center_vertical|end"
-                android:layout_marginEnd="20dp"
-                >
-
-                <ImageView
-                    android:id="@+id/iv_arrow_up"
+                <TextView
+                    android:id="@+id/tv_nation_name2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:srcCompat="@drawable/ic_arrow_up"
-                    tools:ignore="ContentDescription"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/units1"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
                     />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_arrow_up"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="20dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/iv_arrow_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:srcCompat="@drawable/ic_arrow_up"
+                        tools:ignore="ContentDescription"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -172,7 +172,7 @@
                             />
 
                         <TextView
-                            android:id="@+id/tv_units_abonent"
+                            android:id="@+id/tv_nation_abonent"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
@@ -180,7 +180,7 @@
                             android:text="@string/tolov"
                             android:textStyle="bold"
                             android:textColor="@color/black"
-                            android:textSize="18sp"
+                            android:textSize="16sp"
                             />
 
                     </LinearLayout>
@@ -203,7 +203,7 @@
                             android:textSize="18sp"
                             />
                         <TextView
-                            android:id="@+id/tv_units_limit"
+                            android:id="@+id/tv_nation_limit"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
@@ -211,7 +211,7 @@
                             android:text="@string/unit"
                             android:textStyle="bold"
                             android:textColor="@color/black"
-                            android:textSize="16sp"
+                            android:textSize="14sp"
                             />
 
                     </LinearLayout>
@@ -234,7 +234,7 @@
                             android:textSize="18sp"
                             />
                         <TextView
-                            android:id="@+id/tv_units_internet"
+                            android:id="@+id/tv_nation_internet"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
@@ -264,7 +264,7 @@
                             android:textSize="18sp"
                             />
                         <TextView
-                            android:id="@+id/tv_units_call"
+                            android:id="@+id/tv_nation_call"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
@@ -294,7 +294,7 @@
                             android:textSize="18sp"
                             />
                         <TextView
-                            android:id="@+id/tv_units_messsage"
+                            android:id="@+id/tv_nation_messsage"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:maxLines="1"
@@ -311,9 +311,9 @@
                         android:layout_height="50dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="50dp"
-                        app:strokeColor="@color/deep_sky_blue_400"
                         app:strokeWidth="1dp"
                         app:cornerRadius="16dp"
+                        app:strokeColor="@color/deep_sky_blue_400"
                         android:text="@string/activiation"
                         android:textColor="@color/black"
                         app:backgroundTint="@android:color/white"

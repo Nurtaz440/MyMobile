@@ -63,4 +63,71 @@
     <string name="units10">UNITS 40000</string>
     <string name="units11">UNITS 55000</string>
     <string name="units12">UNITS 90000</string>
+
+
+    <!-- text of abanent tolovi-->
+    <string name="abonent">Abonent to\'lovi (7 kunga)</string>
+    <string name="limit">Kiritilgan limit</string>
+    <string name="mobile">Moblie Internet (1 MB)</string>
+    <string name="qongroq">Qong\'roq (1 daqiqa)</string>
+    <string name="sms">SMS (1 dona)</string>
+    <string name="activiation">Faollashtirish</string>
+
+    <!-- tolov-->
+    <string name="tolov">700 so\'m</string>
+    <string name="tolov2">1500 so\'m</string>
+    <string name="tolov3">4000 so\'m</string>
+    <string name="tolov4">8000 so\'m</string>
+    <string name="tolov5">11000 so\'m</string>
+    <string name="tolov6">14000 so\'m</string>
+    <string name="tolov7">18000 so\'m</string>
+    <string name="tolov8">22000 so\'m</string>
+    <string name="tolov9">30000 so\'m</string>
+    <string name="tolov10">40000 so\'m</string>
+    <string name="tolov11">55000 so\'m</string>
+    <string name="tolov12">90000 so\'m</string>
+
+
+
+    <!-- units-->
+    <string name="unit">700 UNITS</string>
+    <string name="unit2">1500 UNITS</string>
+    <string name="unit3">4000 UNITS</string>
+    <string name="unit4">8000 UNITS</string>
+    <string name="unit5">11000 UNITS</string>
+    <string name="unit6">14000 UNITS</string>
+    <string name="unit7">18000 UNITS</string>
+    <string name="unit8">22000 UNITS</string>
+    <string name="unit9">30000 UNITS</string>
+    <string name="unit10">40000 UNITS</string>
+    <string name="unit11">55000 UNITS</string>
+    <string name="unit12">90000 UNITS</string>
+
+    <string name="mobile_unit">1 UNIT</string>
+
+
+    <!-- tolov milliy -->
+    <string name="tolov_milliy">10000 so\'m</string>
+    <string name="tolov_milliy2">15000 so\'m</string>
+    <string name="tolov_milliy3">40000 so\'m</string>
+    <string name="tolov_milliy4">50000 so\'m</string>
+    <string name="tolov_milliy5">70000 so\'m</string>
+    <string name="tolov_milliy6">100000 so\'m</string>
+    <string name="tolov_milliy7">149000 so\'m</string>
+
+    <!-- milliy nomi-->
+    <string name="milliy1">Milliy 10</string>
+    <string name="milliy2">Milliy 15</string>
+    <string name="milliy3">Milliy 40</string>
+    <string name="milliy4">Milliy 50</string>
+    <string name="milliy5">Milliy 70</string>
+    <string name="milliy6">Milliy 100</string>
+    <string name="milliy7">VIP</string>
+
+
+    <string name="nation_minuts">10 daqiqa</string>
+    <string name="nation_mg">10 MB</string>
+    <string name="nation_sms">10 SMS</string>
+
+
 </resources>

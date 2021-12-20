@@ -15,7 +15,7 @@ class UNITSFragment : BaseFragment<FragmentUNITSBinding, UNITSFragmentVM>() {
     }
 
     fun setUp() {
-        rateAdapter = UNITSAdapter { }
+        rateAdapter = UNITSAdapter {}
         rateAdapter.setData(Constants.getRateItems())
 
         binding.rvUnits.layoutManager=

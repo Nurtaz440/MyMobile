@@ -17,18 +17,26 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:tabIndicatorColor="@color/gorse_600"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:tabIndicatorHeight="0dp"
             app:tabMaxWidth="0dp"
-            app:tabMode="fixed"
+            app:tabMode="scrollable"
+            app:tabIndicatorAnimationMode="elastic"
+            app:tabIndicatorGravity="stretch"
+            app:tabIndicator="@drawable/bg_tab_rect"
             app:tabGravity="fill"
-            app:tabTextColor="@color/alizarin_700"
+            app:tabTextColor="@color/black"
+            app:tabSelectedTextColor="@color/white"
             />
 
-        <androidx.viewpager.widget.ViewPager
+        <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/view_pager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="56dp"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
