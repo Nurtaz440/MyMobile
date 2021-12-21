@@ -5,15 +5,36 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import mening.dasturim.mymobile.R
+import mening.dasturim.mymobile.data.constants.Constants
+import mening.dasturim.mymobile.databinding.FragmentPrivilegeBinding
+import mening.dasturim.mymobile.ui.base.BaseFragment
+import mening.dasturim.mymobile.ui.main.user.rate.nation.NationAdapter
 
-class PrivilegeFragment : Fragment() {
+class PrivilegeFragment : BaseFragment<FragmentPrivilegeBinding,PrivilegeVM>() {
+    private  lateinit var privilegeAdapter: PrivilegeAdapter
+    override fun onBound() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_privilege, container, false)
+        setUp()
     }
+
+    fun setUp(){
+        privilegeAdapter = PrivilegeAdapter {}
+        privilegeAdapter.setData(Constants.getPrivilegeItems())
+
+        binding.rvPrivilege.layoutManager=
+            LinearLayoutManager(context, RecyclerView.VERTICAL, false)
+
+        binding.rvPrivilege.adapter=privilegeAdapter
+    }
+
+    override fun getLayoutResId()=R.layout.fragment_privilege
+
+    override val vm: PrivilegeVM
+        get() = ViewModelProvider(this).get(PrivilegeVM::class.java)
+
+
 }

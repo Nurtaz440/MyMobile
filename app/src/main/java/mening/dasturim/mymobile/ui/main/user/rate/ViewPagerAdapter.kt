@@ -12,24 +12,9 @@ import mening.dasturim.mymobile.ui.main.user.rate.units.UNITSFragment
 class ViewPagerAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
     FragmentStateAdapter(fragmentManager, lifecycle) {
 
-    // val fragmentList=ArrayList<Fragment>()
- //    val fragmentTitle= ArrayList<String>()
-
-
-
-   // override fun getCount(): Int=fragmentList.size
-
- //   override fun getItem(position: Int): Fragment =fragmentList[position]
- //   override fun getPageTitle(position: Int): CharSequence=fragmentTitle[position]
-
-//    fun addFragment(fm:Fragment,title:String){
-//        fragmentList.add(fm)
-//        fragmentTitle.add(title)
-//    }
-
     override fun getItemCount(): Int {
 
-       return 6
+       return 4
     }
 
     override fun createFragment(position: Int): Fragment {
@@ -40,11 +25,7 @@ class ViewPagerAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
             return NationFragment()
         }else if (position ==2){
             return PrivilegeFragment()
-        }else if (position ==3){
-            return M2MFragment()
-        }else if (position ==4){
-            return PrivilegeFragment()
-        }else if (position ==5){
+        }else if (position ==3) {
             return M2MFragment()
         }
         return fragment

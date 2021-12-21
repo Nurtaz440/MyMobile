@@ -12,14 +12,39 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/activity_main.xml" value="0.16259057971014493" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/bottom_nav_controller.xml" value="0.203125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_account2.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_daily.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_daily_sms.xml" value="0.19384057971014493" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_inter_nonstop.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_international.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_internet.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_internet_pockets.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_m2_m.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_message.xml" value="0.2" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_minuts.xml" value="0.203125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_nation.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_non_stop.xml" value="0.203125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_notification2.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_privilege.xml" value="0.203125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_rate.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_sms_packets.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_tasix.xml" value="0.203125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_u_n_i_t_s.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_u_s_s_d.xml" value="0.2" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/item_daily_sms.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/item_daily_stop.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/item_international.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/item_internet.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/item_internet_non_stop.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/item_m2m.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/item_minutes.xml" value="0.203125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/item_nation.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/item_non_stop.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/item_privilege.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/item_sms.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/item_tasix.xml" value="0.203125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/item_units.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/item_ussd.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/item_viewpager.xml" value="0.203125" />
       </map>
     </option>

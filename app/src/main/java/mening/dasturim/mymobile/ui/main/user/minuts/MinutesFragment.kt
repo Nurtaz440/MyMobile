@@ -1,19 +1,32 @@
 package mening.dasturim.mymobile.ui.main.user.minuts
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import mening.dasturim.mymobile.R
+import mening.dasturim.mymobile.data.constants.Constants
+import mening.dasturim.mymobile.databinding.FragmentMinutsBinding
+import mening.dasturim.mymobile.ui.base.BaseFragment
 
-class MinutesFragment : Fragment() {
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_minuts, container, false)
+class MinutesFragment  : BaseFragment<FragmentMinutsBinding, MinutesVM>() {
+    private lateinit var minutesAdapter: MinutesAdapter
+    override fun onBound() {
+        setUp()
     }
+
+    fun setUp(){
+        minutesAdapter= MinutesAdapter {  }
+
+        minutesAdapter.setData(Constants.getMinutesItems())
+        binding.rvMinutes.layoutManager= LinearLayoutManager(context, RecyclerView.VERTICAL,false)
+        binding.rvMinutes.adapter=minutesAdapter
+    }
+
+    override fun getLayoutResId()=R.layout.fragment_minuts
+
+    override val vm: MinutesVM
+        get() = ViewModelProvider(this).get(MinutesVM::class.java)
+
+
 }
