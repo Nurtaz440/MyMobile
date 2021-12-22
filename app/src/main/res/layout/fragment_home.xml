@@ -62,11 +62,11 @@
                     android:layout_gravity="end"
                     android:layout_marginTop="60dp"
                     android:layout_marginEnd="24dp"
-                    app:rippleColor="@color/deep_sky_blue_100"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?android:attr/selectableItemBackgroundBorderless"
                     app:cardCornerRadius="16dp"
+                    app:rippleColor="@color/deep_sky_blue_100"
                     >
 
                     <ImageView
@@ -75,6 +75,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_margin="16dp"
                         app:srcCompat="@drawable/ic_call"
+                        app:tint="@color/deep_sky_blue_400"
                         tools:ignore="ContentDescription"
                         />
 
@@ -91,10 +92,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="60dp"
-                        android:layout_marginTop="23dp"
+                        android:layout_marginTop="24dp"
                         android:text="@string/call_center_number"
                         android:textColor="@color/black"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:textStyle="bold"
                         />
 
@@ -107,11 +108,11 @@
                     android:layout_gravity="end"
                     android:layout_marginTop="130dp"
                     android:layout_marginEnd="24dp"
-                    app:rippleColor="@color/deep_sky_blue_100"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?android:attr/selectableItemBackgroundBorderless"
                     app:cardCornerRadius="16dp"
+                    app:rippleColor="@color/deep_sky_blue_100"
                     >
 
                     <ImageView
@@ -127,11 +128,11 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
                         android:layout_marginStart="60dp"
-                        android:layout_marginTop="18dp"
                         android:text="@string/balans"
                         android:textColor="@color/black"
-                        android:textSize="21sp"
+                        android:textSize="20sp"
                         android:textStyle="bold"
                         />
 
@@ -170,10 +171,10 @@
                     android:layout_gravity="end"
                     android:layout_marginTop="60dp"
                     android:layout_marginEnd="24dp"
-                    android:focusable="true"
                     android:clickable="true"
-                    app:rippleColor="@color/alizarin_100"
+                    android:focusable="true"
                     app:cardCornerRadius="16dp"
+                    app:rippleColor="@color/alizarin_100"
                     >
 
                     <ImageView
@@ -199,10 +200,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="60dp"
-                        android:layout_marginTop="23dp"
+                        android:layout_marginTop="24dp"
                         android:text=""
                         android:textColor="@color/black"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:textStyle="bold"
                         />
                 </com.google.android.material.card.MaterialCardView>
@@ -212,12 +213,12 @@
                     android:layout_width="140dp"
                     android:layout_height="60dp"
                     android:layout_gravity="end"
-                    android:focusable="true"
-                    android:clickable="true"
-                    app:rippleColor="@color/alizarin_100"
                     android:layout_marginTop="130dp"
                     android:layout_marginEnd="24dp"
+                    android:clickable="true"
+                    android:focusable="true"
                     app:cardCornerRadius="16dp"
+                    app:rippleColor="@color/alizarin_100"
                     >
 
                     <ImageView
@@ -234,11 +235,11 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
                         android:layout_marginStart="60dp"
-                        android:layout_marginTop="18dp"
                         android:text="@string/balans"
                         android:textColor="@color/black"
-                        android:textSize="21sp"
+                        android:textSize="20sp"
                         android:textStyle="bold"
                         />
                 </com.google.android.material.card.MaterialCardView>
@@ -275,10 +276,10 @@
                     android:layout_gravity="end"
                     android:layout_marginTop="60dp"
                     android:layout_marginEnd="24dp"
+                    android:clickable="true"
+                    android:focusable="true"
                     app:cardCornerRadius="16dp"
                     app:cardElevation="10dp"
-                    android:focusable="true"
-                    android:clickable="true"
                     app:rippleColor="@color/vivid_violet_100"
                     >
 
@@ -305,10 +306,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="60dp"
-                        android:layout_marginTop="23dp"
+                        android:layout_marginTop="24dp"
                         android:text=""
                         android:textColor="@color/black"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:textStyle="bold"
                         />
 
@@ -319,12 +320,12 @@
                     android:layout_width="140dp"
                     android:layout_height="60dp"
                     android:layout_gravity="end"
-                    android:focusable="true"
-                    android:clickable="true"
-                    app:rippleColor="@color/vivid_violet_100"
                     android:layout_marginTop="130dp"
                     android:layout_marginEnd="24dp"
+                    android:clickable="true"
+                    android:focusable="true"
                     app:cardCornerRadius="16dp"
+                    app:rippleColor="@color/vivid_violet_100"
                     >
 
                     <ImageView
@@ -341,11 +342,11 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
                         android:layout_marginStart="60dp"
-                        android:layout_marginTop="18dp"
                         android:text="@string/balans"
                         android:textColor="@color/black"
-                        android:textSize="21sp"
+                        android:textSize="20sp"
                         android:textStyle="bold"
                         />
 
@@ -386,9 +387,9 @@
                     android:layout_gravity="end"
                     android:layout_marginTop="60dp"
                     android:layout_marginEnd="24dp"
-                    app:cardCornerRadius="16dp"
-                    android:focusable="true"
                     android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="16dp"
                     app:rippleColor="@color/gorse_100"
                     >
 
@@ -415,10 +416,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="60dp"
-                        android:layout_marginTop="23dp"
+                        android:layout_marginTop="24dp"
                         android:text=""
                         android:textColor="@color/black"
-                        android:textSize="24sp"
+                        android:textSize="20sp"
                         android:textStyle="bold"
                         />
 
@@ -431,10 +432,10 @@
                     android:layout_gravity="end"
                     android:layout_marginTop="130dp"
                     android:layout_marginEnd="24dp"
-                    android:focusable="true"
                     android:clickable="true"
-                    app:rippleColor="@color/gorse_100"
+                    android:focusable="true"
                     app:cardCornerRadius="16dp"
+                    app:rippleColor="@color/gorse_100"
                     >
 
                     <ImageView
@@ -451,11 +452,11 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
                         android:layout_marginStart="60dp"
-                        android:layout_marginTop="18dp"
                         android:text="@string/balans"
                         android:textColor="@color/black"
-                        android:textSize="21sp"
+                        android:textSize="20sp"
                         android:textStyle="bold"
                         />
 
@@ -475,9 +476,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cl_main"
             app:layout_goneMarginStart="16dp"
+            app:rippleColor="@color/deep_sky_blue_100"
             app:strokeColor="@color/deep_sky_blue_400"
             app:strokeWidth="1dp"
-            app:rippleColor="@color/deep_sky_blue_100"
             >
 
             <ImageView
@@ -496,13 +497,13 @@
             android:layout_height="60dp"
             android:layout_marginStart="7dp"
             android:layout_marginTop="6dp"
-            app:cardCornerRadius="16dp"
-            android:focusable="true"
             android:clickable="true"
-            app:rippleColor="@color/alizarin_100"
+            android:focusable="true"
+            app:cardCornerRadius="16dp"
             app:layout_constraintStart_toEndOf="@+id/cv_uzmobile"
             app:layout_constraintTop_toBottomOf="@+id/cl_main"
             app:layout_goneMarginStart="16dp"
+            app:rippleColor="@color/alizarin_100"
             >
 
             <ImageView
@@ -521,13 +522,13 @@
             android:layout_height="60dp"
             android:layout_marginStart="7dp"
             android:layout_marginTop="6dp"
-            app:cardCornerRadius="16dp"
-            android:focusable="true"
             android:clickable="true"
-            app:rippleColor="@color/vivid_violet_100"
+            android:focusable="true"
+            app:cardCornerRadius="16dp"
             app:layout_constraintStart_toEndOf="@+id/cv_mobiuz"
             app:layout_constraintTop_toBottomOf="@+id/cl_main"
             app:layout_goneMarginStart="16dp"
+            app:rippleColor="@color/vivid_violet_100"
             >
 
             <ImageView
@@ -547,13 +548,13 @@
             android:layout_height="60dp"
             android:layout_marginStart="7dp"
             android:layout_marginTop="6dp"
-            app:cardCornerRadius="16dp"
-            android:focusable="true"
             android:clickable="true"
-            app:rippleColor="@color/gorse_100"
+            android:focusable="true"
+            app:cardCornerRadius="16dp"
             app:layout_constraintStart_toEndOf="@+id/cv_ucell"
             app:layout_constraintTop_toBottomOf="@+id/cl_main"
             app:layout_goneMarginStart="16dp"
+            app:rippleColor="@color/gorse_100"
             >
 
             <ImageView
@@ -572,28 +573,31 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="424dp"
+            android:layout_marginTop="400dp"
             android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/partial_bottom_nav_controller"
             >
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl_main_blue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+
                 >
 
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_icon_blue"
                     android:layout_width="185dp"
-                    android:layout_height="110dp"
+                    android:layout_height="105dp"
+                    android:layout_marginTop="24dp"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?android:attr/selectableItemBackgroundBorderless"
                     app:cardCornerRadius="16dp"
-                    app:rippleColor="@color/deep_sky_blue_100"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
+                    app:rippleColor="@color/deep_sky_blue_100"
                     >
 
                     <LinearLayout
@@ -627,14 +631,15 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_icon_blue2"
                     android:layout_width="185dp"
-                    android:layout_height="110dp"
+                    android:layout_height="105dp"
                     android:layout_marginStart="8dp"
-                    app:cardCornerRadius="16dp"
-                    android:focusable="true"
+                    android:layout_marginTop="24dp"
                     android:clickable="true"
-                    app:rippleColor="@color/deep_sky_blue_100"
+                    android:focusable="true"
+                    app:cardCornerRadius="16dp"
                     app:layout_constraintStart_toEndOf="@+id/cv_icon_blue"
                     app:layout_constraintTop_toTopOf="parent"
+                    app:rippleColor="@color/deep_sky_blue_100"
                     >
 
                     <LinearLayout
@@ -668,14 +673,14 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_icon_blue3"
                     android:layout_width="185dp"
-                    android:layout_height="110dp"
+                    android:layout_height="105dp"
                     android:layout_marginTop="16dp"
-                    app:cardCornerRadius="16dp"
-                    android:focusable="true"
                     android:clickable="true"
-                    app:rippleColor="@color/deep_sky_blue_100"
+                    android:focusable="true"
+                    app:cardCornerRadius="16dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/cv_icon_blue"
+                    app:rippleColor="@color/deep_sky_blue_100"
                     >
 
                     <LinearLayout
@@ -710,15 +715,15 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_icon_blue4"
                     android:layout_width="185dp"
-                    android:layout_height="110dp"
+                    android:layout_height="105dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="16dp"
-                    android:focusable="true"
                     android:clickable="true"
-                    app:rippleColor="@color/deep_sky_blue_100"
+                    android:focusable="true"
                     app:cardCornerRadius="16dp"
                     app:layout_constraintStart_toEndOf="@+id/cv_icon_blue3"
                     app:layout_constraintTop_toBottomOf="@+id/cv_icon_blue2"
+                    app:rippleColor="@color/deep_sky_blue_100"
                     >
 
                     <LinearLayout
@@ -753,14 +758,17 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_icon_blue5"
                     android:layout_width="185dp"
-                    android:layout_height="110dp"
+                    android:layout_height="105dp"
                     android:layout_marginTop="16dp"
-                    app:cardCornerRadius="16dp"
-                    android:focusable="true"
+                    android:layout_marginBottom="24dp"
                     android:clickable="true"
-                    app:rippleColor="@color/deep_sky_blue_100"
+                    android:focusable="true"
+                    app:cardCornerRadius="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/cv_icon_blue3"
+                    app:rippleColor="@color/deep_sky_blue_100"
+
                     >
 
                     <LinearLayout
@@ -796,15 +804,17 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_icon_blue6"
                     android:layout_width="185dp"
-                    android:layout_height="110dp"
+                    android:layout_height="105dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="16dp"
-                    android:focusable="true"
+                    android:layout_marginBottom="24dp"
                     android:clickable="true"
-                    app:rippleColor="@color/deep_sky_blue_100"
+                    android:focusable="true"
                     app:cardCornerRadius="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/cv_icon_blue5"
                     app:layout_constraintTop_toBottomOf="@+id/cv_icon_blue4"
+                    app:rippleColor="@color/deep_sky_blue_100"
                     >
 
                     <LinearLayout
@@ -844,9 +854,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="424dp"
+            android:layout_marginTop="400dp"
             android:layout_marginEnd="16dp"
             android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/partial_bottom_nav_controller"
             >
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -859,13 +870,14 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_icon_red"
                     android:layout_width="185dp"
-                    android:layout_height="110dp"
-                    app:cardCornerRadius="16dp"
-                    android:focusable="true"
+                    android:layout_height="105dp"
+                    android:layout_marginTop="24dp"
                     android:clickable="true"
-                    app:rippleColor="@color/alizarin_100"
+                    android:focusable="true"
+                    app:cardCornerRadius="16dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
+                    app:rippleColor="@color/alizarin_100"
                     >
 
                     <LinearLayout
@@ -900,14 +912,15 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_icon_red2"
                     android:layout_width="185dp"
-                    android:layout_height="110dp"
+                    android:layout_height="105dp"
                     android:layout_marginStart="8dp"
-                    app:cardCornerRadius="16dp"
-                    android:focusable="true"
+                    android:layout_marginTop="24dp"
                     android:clickable="true"
-                    app:rippleColor="@color/alizarin_100"
+                    android:focusable="true"
+                    app:cardCornerRadius="16dp"
                     app:layout_constraintStart_toEndOf="@+id/cv_icon_red"
                     app:layout_constraintTop_toTopOf="parent"
+                    app:rippleColor="@color/alizarin_100"
                     >
 
                     <LinearLayout
@@ -942,14 +955,14 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_icon_red3"
                     android:layout_width="185dp"
-                    android:layout_height="110dp"
+                    android:layout_height="105dp"
                     android:layout_marginTop="16dp"
-                    app:cardCornerRadius="16dp"
-                    android:focusable="true"
                     android:clickable="true"
-                    app:rippleColor="@color/alizarin_100"
+                    android:focusable="true"
+                    app:cardCornerRadius="16dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/cv_icon_red"
+                    app:rippleColor="@color/alizarin_100"
                     >
 
                     <LinearLayout
@@ -985,15 +998,15 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_icon_red4"
                     android:layout_width="185dp"
-                    android:layout_height="110dp"
+                    android:layout_height="105dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="16dp"
-                    app:cardCornerRadius="16dp"
-                    android:focusable="true"
                     android:clickable="true"
-                    app:rippleColor="@color/alizarin_100"
+                    android:focusable="true"
+                    app:cardCornerRadius="16dp"
                     app:layout_constraintStart_toEndOf="@+id/cv_icon_red3"
                     app:layout_constraintTop_toBottomOf="@+id/cv_icon_red2"
+                    app:rippleColor="@color/alizarin_100"
                     >
 
                     <LinearLayout
@@ -1029,14 +1042,16 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_icon_red5"
                     android:layout_width="185dp"
-                    android:layout_height="110dp"
+                    android:layout_height="105dp"
                     android:layout_marginTop="16dp"
-                    app:cardCornerRadius="16dp"
-                    android:focusable="true"
                     android:clickable="true"
-                    app:rippleColor="@color/alizarin_100"
+                    android:focusable="true"
+                    app:cardCornerRadius="16dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/cv_icon_red3"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="24dp"
+                    app:rippleColor="@color/alizarin_100"
                     >
 
                     <LinearLayout
@@ -1073,15 +1088,17 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_icon_red6"
                     android:layout_width="185dp"
-                    android:layout_height="110dp"
+                    android:layout_height="105dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="16dp"
-                    app:cardCornerRadius="16dp"
-                    android:focusable="true"
                     android:clickable="true"
-                    app:rippleColor="@color/alizarin_100"
+                    android:focusable="true"
+                    app:cardCornerRadius="16dp"
                     app:layout_constraintStart_toEndOf="@+id/cv_icon_red5"
                     app:layout_constraintTop_toBottomOf="@+id/cv_icon_red4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="24dp"
+                    app:rippleColor="@color/alizarin_100"
                     >
 
                     <LinearLayout
@@ -1122,9 +1139,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="424dp"
+            android:layout_marginTop="400dp"
             android:layout_marginEnd="16dp"
             android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/partial_bottom_nav_controller"
             >
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -1137,13 +1155,14 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_icon_violet"
                     android:layout_width="185dp"
-                    android:layout_height="110dp"
-                    app:cardCornerRadius="16dp"
-                    android:focusable="true"
+                    android:layout_height="105dp"
+                    android:layout_marginTop="24dp"
                     android:clickable="true"
-                    app:rippleColor="@color/vivid_violet_100"
+                    android:focusable="true"
+                    app:cardCornerRadius="16dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
+                    app:rippleColor="@color/vivid_violet_100"
                     >
 
                     <LinearLayout
@@ -1178,14 +1197,15 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_icon_violet2"
                     android:layout_width="185dp"
-                    android:layout_height="110dp"
+                    android:layout_height="105dp"
+                    android:layout_marginTop="24dp"
                     android:layout_marginStart="8dp"
-                    android:focusable="true"
                     android:clickable="true"
-                    app:rippleColor="@color/vivid_violet_100"
+                    android:focusable="true"
                     app:cardCornerRadius="16dp"
                     app:layout_constraintStart_toEndOf="@+id/cv_icon_violet"
                     app:layout_constraintTop_toTopOf="parent"
+                    app:rippleColor="@color/vivid_violet_100"
                     >
 
                     <LinearLayout
@@ -1220,14 +1240,14 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_icon_violet3"
                     android:layout_width="185dp"
-                    android:layout_height="110dp"
+                    android:layout_height="105dp"
                     android:layout_marginTop="16dp"
-                    app:cardCornerRadius="16dp"
-                    android:focusable="true"
                     android:clickable="true"
-                    app:rippleColor="@color/vivid_violet_100"
+                    android:focusable="true"
+                    app:cardCornerRadius="16dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/cv_icon_violet"
+                    app:rippleColor="@color/vivid_violet_100"
                     >
 
                     <LinearLayout
@@ -1263,15 +1283,15 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_icon_violet4"
                     android:layout_width="185dp"
-                    android:layout_height="110dp"
+                    android:layout_height="105dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="16dp"
-                    app:cardCornerRadius="16dp"
-                    android:focusable="true"
                     android:clickable="true"
-                    app:rippleColor="@color/vivid_violet_100"
+                    android:focusable="true"
+                    app:cardCornerRadius="16dp"
                     app:layout_constraintStart_toEndOf="@+id/cv_icon_violet3"
                     app:layout_constraintTop_toBottomOf="@+id/cv_icon_violet2"
+                    app:rippleColor="@color/vivid_violet_100"
                     >
 
                     <LinearLayout
@@ -1307,14 +1327,16 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_icon_violet5"
                     android:layout_width="185dp"
-                    android:layout_height="110dp"
+                    android:layout_height="105dp"
                     android:layout_marginTop="16dp"
-                    app:cardCornerRadius="16dp"
-                    android:focusable="true"
                     android:clickable="true"
-                    app:rippleColor="@color/vivid_violet_100"
+                    android:focusable="true"
+                    app:cardCornerRadius="16dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/cv_icon_violet3"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="24dp"
+                    app:rippleColor="@color/vivid_violet_100"
                     >
 
                     <LinearLayout
@@ -1351,15 +1373,17 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_icon_violet6"
                     android:layout_width="185dp"
-                    android:layout_height="110dp"
+                    android:layout_height="105dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="16dp"
-                    app:cardCornerRadius="16dp"
-                    android:focusable="true"
                     android:clickable="true"
-                    app:rippleColor="@color/vivid_violet_100"
+                    android:focusable="true"
+                    app:cardCornerRadius="16dp"
                     app:layout_constraintStart_toEndOf="@+id/cv_icon_violet5"
                     app:layout_constraintTop_toBottomOf="@+id/cv_icon_violet4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="24dp"
+                    app:rippleColor="@color/vivid_violet_100"
                     >
 
                     <LinearLayout
@@ -1399,9 +1423,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="424dp"
+            android:layout_marginTop="400dp"
             android:layout_marginEnd="16dp"
             android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/partial_bottom_nav_controller"
             >
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -1415,13 +1440,14 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_icon_yellow"
                     android:layout_width="185dp"
-                    android:layout_height="110dp"
-                    app:cardCornerRadius="16dp"
-                    android:focusable="true"
+                    android:layout_height="105dp"
+                    android:layout_marginTop="24dp"
                     android:clickable="true"
-                    app:rippleColor="@color/gorse_100"
+                    android:focusable="true"
+                    app:cardCornerRadius="16dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
+                    app:rippleColor="@color/gorse_100"
                     >
 
                     <LinearLayout
@@ -1456,14 +1482,15 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_icon_yellow2"
                     android:layout_width="185dp"
-                    android:layout_height="110dp"
+                    android:layout_height="105dp"
                     android:layout_marginStart="8dp"
-                    android:focusable="true"
+                    android:layout_marginTop="24dp"
                     android:clickable="true"
-                    app:rippleColor="@color/gorse_100"
+                    android:focusable="true"
                     app:cardCornerRadius="16dp"
                     app:layout_constraintStart_toEndOf="@+id/cv_icon_yellow"
                     app:layout_constraintTop_toTopOf="parent"
+                    app:rippleColor="@color/gorse_100"
                     >
 
                     <LinearLayout
@@ -1498,14 +1525,14 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_icon_yellow3"
                     android:layout_width="185dp"
-                    android:layout_height="110dp"
+                    android:layout_height="105dp"
                     android:layout_marginTop="16dp"
-                    app:cardCornerRadius="16dp"
-                    android:focusable="true"
                     android:clickable="true"
-                    app:rippleColor="@color/gorse_100"
+                    android:focusable="true"
+                    app:cardCornerRadius="16dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/cv_icon_yellow"
+                    app:rippleColor="@color/gorse_100"
                     >
 
                     <LinearLayout
@@ -1541,15 +1568,15 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_icon_yellow4"
                     android:layout_width="185dp"
-                    android:layout_height="110dp"
+                    android:layout_height="105dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="16dp"
-                    android:focusable="true"
                     android:clickable="true"
-                    app:rippleColor="@color/gorse_100"
+                    android:focusable="true"
                     app:cardCornerRadius="16dp"
                     app:layout_constraintStart_toEndOf="@+id/cv_icon_yellow3"
                     app:layout_constraintTop_toBottomOf="@+id/cv_icon_yellow2"
+                    app:rippleColor="@color/gorse_100"
                     >
 
                     <LinearLayout
@@ -1585,14 +1612,16 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_icon_yellow5"
                     android:layout_width="185dp"
-                    android:layout_height="110dp"
+                    android:layout_height="105dp"
                     android:layout_marginTop="16dp"
-                    app:cardCornerRadius="16dp"
-                    android:focusable="true"
                     android:clickable="true"
-                    app:rippleColor="@color/gorse_100"
+                    android:focusable="true"
+                    app:cardCornerRadius="16dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/cv_icon_yellow3"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="24dp"
+                    app:rippleColor="@color/gorse_100"
                     >
 
                     <LinearLayout
@@ -1629,15 +1658,17 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cv_icon_yellow6"
                     android:layout_width="185dp"
-                    android:layout_height="110dp"
+                    android:layout_height="105dp"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="16dp"
-                    app:cardCornerRadius="16dp"
-                    android:focusable="true"
                     android:clickable="true"
-                    app:rippleColor="@color/gorse_100"
+                    android:focusable="true"
+                    app:cardCornerRadius="16dp"
                     app:layout_constraintStart_toEndOf="@+id/cv_icon_yellow5"
                     app:layout_constraintTop_toBottomOf="@+id/cv_icon_yellow4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="24dp"
+                    app:rippleColor="@color/gorse_100"
                     >
 
                     <LinearLayout

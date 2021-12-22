@@ -7,10 +7,7 @@
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        style="@style/CustomCardCorners"
-        app:cardElevation="10dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
+        style="@style/CustomCardTopCorners"
         app:layout_constraintBottom_toBottomOf="parent"
         >
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -22,7 +19,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl1"
-                android:layout_width="40dp"
+                android:layout_width="45dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="32dp"
                 >
@@ -44,7 +41,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl2"
-                android:layout_width="40dp"
+                android:layout_width="45dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="50dp"
                 >
@@ -66,7 +63,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl3"
-                android:layout_width="40dp"
+                android:layout_width="45dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="50dp"
                 >
@@ -88,7 +85,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl4"
-                android:layout_width="40dp"
+                android:layout_width="45dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="50dp"
                 >

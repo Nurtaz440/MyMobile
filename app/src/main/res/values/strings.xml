@@ -18,16 +18,16 @@
     <!--text of uzMobile  -->
     <string name="call_center">call_center</string>
     <string name="balans">Balans</string>
-    <string name="call_center_number">1084</string>
+    <string name="call_center_number">1099</string>
 
     <!--text of mobiuz  -->
-    <string name="call_center_number_mobiuz">0870</string>
+    <string name="call_center_number_mobiuz">0890</string>
 
     <!--text of ucell  -->
     <string name="call_center_number_ucell">8123</string>
 
     <!--text of beeline  -->
-    <string name="call_center_number_beeline">0639</string>
+    <string name="call_center_number_beeline">0611</string>
 
     <!-- TODO: Remove or change this placeholder text -->
 

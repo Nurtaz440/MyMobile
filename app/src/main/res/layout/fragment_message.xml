@@ -30,6 +30,7 @@
             app:tabGravity="fill"
             app:tabTextColor="@color/black"
             app:tabSelectedTextColor="@color/white"
+            android:background="@color/whiter"
             />
 
         <androidx.viewpager2.widget.ViewPager2

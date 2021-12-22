@@ -16,10 +16,10 @@ object Constants {
     const val LANGUAGE_UZBEK: String = "uz"
     const val LANGUAGE_ENGLISH: String = "en"
 
-    const val CALL_CENTER_NUMBER_UZMOBILE = "1084"
-    const val CALL_CENTER_NUMBER_MOBIEUZ = "0870"
+    const val CALL_CENTER_NUMBER_UZMOBILE = "1099"
+    const val CALL_CENTER_NUMBER_MOBIEUZ = "0890"
     const val CALL_CENTER_NUMBER_UCELL = "8123"
-    const val CALL_CENTER_NUMBER_BEELINE = "0639"
+    const val CALL_CENTER_NUMBER_BEELINE = "0611"
 
     fun getRateItems(): ArrayList<RateItem> {
         return arrayListOf(
