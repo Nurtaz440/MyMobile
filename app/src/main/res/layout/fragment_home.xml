@@ -74,7 +74,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_margin="16dp"
-                        app:srcCompat="@drawable/ic_call"
+                        app:srcCompat="@drawable/ic_call_calling"
                         app:tint="@color/deep_sky_blue_400"
                         tools:ignore="ContentDescription"
                         />
@@ -83,8 +83,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="60dp"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="6dp"
                         android:text="@string/call_center"
+                        android:textSize="12sp"
                         />
 
                     <TextView
@@ -92,10 +93,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="60dp"
-                        android:layout_marginTop="24dp"
+                        android:layout_marginTop="18dp"
                         android:text="@string/call_center_number"
                         android:textColor="@color/black"
-                        android:textSize="20sp"
+                        android:textSize="24sp"
                         android:textStyle="bold"
                         />
 
@@ -182,7 +183,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_margin="16dp"
-                        app:srcCompat="@drawable/ic_call"
+                        app:srcCompat="@drawable/ic_call_calling"
                         app:tint="@color/alizarin_700"
                         tools:ignore="ContentDescription"
                         />
@@ -191,8 +192,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="60dp"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="4dp"
                         android:text="@string/call_center"
+                        android:textSize="12sp"
                         />
 
                     <TextView
@@ -200,10 +202,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="60dp"
-                        android:layout_marginTop="24dp"
+                        android:layout_marginTop="18dp"
                         android:text=""
                         android:textColor="@color/black"
-                        android:textSize="20sp"
+                        android:textSize="24sp"
                         android:textStyle="bold"
                         />
                 </com.google.android.material.card.MaterialCardView>
@@ -288,7 +290,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_margin="16dp"
-                        app:srcCompat="@drawable/ic_call"
+                        app:srcCompat="@drawable/ic_call_calling"
                         app:tint="@color/vivid_violet_800"
                         tools:ignore="ContentDescription"
                         />
@@ -297,8 +299,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="60dp"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="4dp"
                         android:text="@string/call_center"
+                        android:textSize="12sp"
                         />
 
                     <TextView
@@ -306,10 +309,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="60dp"
-                        android:layout_marginTop="24dp"
+                        android:layout_marginTop="18dp"
                         android:text=""
                         android:textColor="@color/black"
-                        android:textSize="20sp"
+                        android:textSize="24sp"
                         android:textStyle="bold"
                         />
 
@@ -398,7 +401,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_margin="16dp"
-                        app:srcCompat="@drawable/ic_call"
+                        app:srcCompat="@drawable/ic_call_calling"
                         app:tint="@color/gorse_600"
                         tools:ignore="ContentDescription"
                         />
@@ -407,7 +410,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="60dp"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="4dp"
+                        android:textSize="12sp"
                         android:text="@string/call_center"
                         />
 
@@ -416,10 +420,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="60dp"
-                        android:layout_marginTop="24dp"
+                        android:layout_marginTop="18dp"
                         android:text=""
                         android:textColor="@color/black"
-                        android:textSize="20sp"
+                        android:textSize="24sp"
                         android:textStyle="bold"
                         />
 
@@ -575,7 +579,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="400dp"
             android:layout_marginEnd="16dp"
-            app:layout_constraintBottom_toTopOf="@+id/partial_bottom_nav_controller"
+            app:layout_constraintBottom_toBottomOf="parent"
             >
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -857,7 +861,7 @@
             android:layout_marginTop="400dp"
             android:layout_marginEnd="16dp"
             android:visibility="gone"
-            app:layout_constraintBottom_toTopOf="@+id/partial_bottom_nav_controller"
+            app:layout_constraintBottom_toBottomOf="parent"
             >
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -1142,7 +1146,7 @@
             android:layout_marginTop="400dp"
             android:layout_marginEnd="16dp"
             android:visibility="gone"
-            app:layout_constraintBottom_toTopOf="@+id/partial_bottom_nav_controller"
+            app:layout_constraintBottom_toBottomOf="parent"
             >
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -1426,7 +1430,7 @@
             android:layout_marginTop="400dp"
             android:layout_marginEnd="16dp"
             android:visibility="gone"
-            app:layout_constraintBottom_toTopOf="@+id/partial_bottom_nav_controller"
+            app:layout_constraintBottom_toBottomOf="parent"
             >
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -1705,12 +1709,19 @@
 
         </ScrollView>
 
-        <include
-            android:id="@+id/partial_bottom_nav_controller"
-            layout="@layout/bottom_nav_controller"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/scroll"
-            />
+<!--        <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--            android:id="@+id/nv_bottom"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?attr/actionBarSize"-->
+<!--            style="@style/CustomCardTopCorners"-->
+<!--            android:background="@drawable/bg_btn_top"-->
+<!--            app:menu="@menu/menu_bottom"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            />-->
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

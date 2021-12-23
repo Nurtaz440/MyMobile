@@ -12,8 +12,6 @@ import androidx.recyclerview.widget.RecyclerView
 import mening.dasturim.mymobile.R
 import mening.dasturim.mymobile.data.module.NonStopItem
 import mening.dasturim.mymobile.databinding.ItemInternetNonStopBinding
-import mening.dasturim.mymobile.databinding.ItemTasixBinding
-import mening.dasturim.mymobile.ui.main.user.internet.tasix.TasixAdapter
 import mening.dasturim.mymobile.utils.ViewUtils
 
 class InternetNonstopAdapter(private val itemClickListener: (Int) -> Unit) :

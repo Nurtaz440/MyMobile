@@ -16,7 +16,7 @@
     <string name="beeline">Beeline</string>
 
     <!--text of uzMobile  -->
-    <string name="call_center">call_center</string>
+    <string name="call_center">operator</string>
     <string name="balans">Balans</string>
     <string name="call_center_number">1099</string>
 
@@ -40,9 +40,8 @@
     <string name="tariflar">Tariflar</string>
     <string name="daqiqalar">Daqiqalar</string>
 
-    <string name="account">AccountFragment</string>
-    <string name="notify">NotificationFragment</string>
-    <string name="settings">SettingsFragment</string>
+    <string name="account">Bog\'lanish</string>
+    <string name="settings">Xizmatlar</string>
 
     <!--text of rate -->
     <string name="units">UNITS</string>
@@ -358,5 +357,34 @@ o\‘chirish</string>
 bilish</string>
     <string name="ussd_describe8">Axborot-ko\‘ngilochar
 hizmatlarini o\‘chirish</string>
+
+    <!-- sozlamalar-->
+    <string name="language">Til o\'zgartirish</string>
+    <string name="ulashish">Ulashish</string>
+    <string name="baho">Baho berish</string>
+    <string name="boglanish">Biz bilan bog\'lanish</string>
+    
+    <!-- xizmatlar-->
+    <string name="foydali_almashinuv">Foydali almashinuv</string>
+    <string name="limitsiz_ovoz">"Limitsiz ovoz” xizmati</string>
+    <string name="qollab_yubor">Qo\‘llab yubor</string>
+    <string name="tungi_internet">Tungi Internet</string>
+    <string name="extra_balans">EXTRA balans</string>
+    <string name="tungi_qongiroqlar">Tungi qo\‘ng\‘iroqlar</string>
+    <string name="restart">Restart</string>
+    <string name="ziyonet">ZiyoNet</string>
+    <string name="oyla_uchun">“Oila uchun” xizmati</string>
+    <string name="jarimalar_haqida">YHQ jarimalar haqida xabar xizmati</string>
+    <string name="gsm_abonent">GSM Abonent bo‘limi xizmatlari</string>
+    <string name="tezkor_otkazmalar">Tezkor o\‘tqazmalar</string>
+    <string name="qabul_qilinmagan">“Qabul qilinmagan qo\‘ng\‘iroq” va ”Tarmoqda”</string>
+    <string name="sevimli_raqam">Sevimli raqamlar</string>
+    <string name="raqam_ijarasi">Raqam ijarasi</string>
+    <string name="axborat_xizmatlari">Axborot-ko\‘ngilochar xizmatlari</string>
+    <string name="mediabay">“Mediabay” dan online-kinoteatr</string>
+    <string name="yaqinlar">Yaqinlaringizga paket xarid qiling</string>
+    <string name="menga_qongiroq_qil">Menga qo\‘ng\‘iroq qiling</string>
+    <string name="muzzone">MuzZone</string>
+    <string name="esim">eSIM</string>
 
 </resources>

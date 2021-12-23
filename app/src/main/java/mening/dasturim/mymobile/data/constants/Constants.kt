@@ -2,10 +2,7 @@ package mening.dasturim.mymobile.data.constants
 
 import mening.dasturim.mymobile.R
 import mening.dasturim.mymobile.data.local.PrefsHelper
-import mening.dasturim.mymobile.data.module.DailyItems
-import mening.dasturim.mymobile.data.module.NonStopItem
-import mening.dasturim.mymobile.data.module.RateItem
-import mening.dasturim.mymobile.data.module.USSDItems
+import mening.dasturim.mymobile.data.module.*
 
 object Constants {
     lateinit var prefs: PrefsHelper
@@ -555,8 +552,40 @@ fun getM2MItems(): ArrayList<RateItem> {
             USSDItems(R.string.ussd4,R.string.ussd_describe4),
             USSDItems(R.string.ussd5,R.string.ussd_describe5),
             USSDItems(R.string.ussd6,R.string.ussd_describe6),
-            USSDItems(R.string.ussd7,R.string.ussd_describe7),
-            USSDItems(R.string.ussd8,R.string.ussd_describe8)
+            USSDItems(R.string.ussd7,R.string.ussd_describe7)
+        )
+    }
+    fun getSettingsItems():ArrayList<SettingsItems>{
+        return arrayListOf(
+            SettingsItems(R.string.language),
+            SettingsItems(R.string.ulashish),
+            SettingsItems(R.string.baho),
+            SettingsItems(R.string.boglanish)
+        )
+    }
+    fun getServiceItems():ArrayList<SettingsItems>{
+        return arrayListOf(
+            SettingsItems(R.string.foydali_almashinuv),
+            SettingsItems(R.string.limitsiz_ovoz),
+            SettingsItems(R.string.qollab_yubor),
+            SettingsItems(R.string.tungi_internet),
+            SettingsItems(R.string.extra_balans),
+            SettingsItems(R.string.tungi_qongiroqlar),
+            SettingsItems(R.string.restart),
+            SettingsItems(R.string.ziyonet),
+            SettingsItems(R.string.oyla_uchun),
+            SettingsItems(R.string.jarimalar_haqida),
+            SettingsItems(R.string.gsm_abonent),
+            SettingsItems(R.string.tezkor_otkazmalar),
+            SettingsItems(R.string.qabul_qilinmagan),
+            SettingsItems(R.string.sevimli_raqam),
+            SettingsItems(R.string.raqam_ijarasi),
+            SettingsItems(R.string.axborat_xizmatlari),
+            SettingsItems(R.string.mediabay),
+            SettingsItems(R.string.yaqinlar),
+            SettingsItems(R.string.menga_qongiroq_qil),
+            SettingsItems(R.string.muzzone),
+            SettingsItems(R.string.esim)
         )
     }
 }

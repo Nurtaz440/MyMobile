@@ -7,6 +7,7 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.graphics.Point
+import android.graphics.drawable.Drawable
 import android.os.Build
 import android.transition.ChangeBounds
 import android.transition.TransitionManager
@@ -121,7 +122,7 @@ object ViewUtils {
      * @param duration duration of animation
      */
 
-    fun fadeIn(view: View, duration: Long = 300) {
+    fun fadeIn(view:View, duration: Long = 300) {
         if (view.visibility != View.VISIBLE) {
             val fadeIn = AlphaAnimation(0f, 1f)
             fadeIn.interpolator = AccelerateInterpolator()

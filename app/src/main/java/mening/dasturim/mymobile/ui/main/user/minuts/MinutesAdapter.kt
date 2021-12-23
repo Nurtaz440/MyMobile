@@ -11,10 +11,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import mening.dasturim.mymobile.R
 import mening.dasturim.mymobile.data.module.DailyItems
-import mening.dasturim.mymobile.data.module.NonStopItem
-import mening.dasturim.mymobile.databinding.ItemInternetNonStopBinding
 import mening.dasturim.mymobile.databinding.ItemMinutesBinding
-import mening.dasturim.mymobile.ui.main.user.internet.internetNonstop.InternetNonstopAdapter
 import mening.dasturim.mymobile.utils.ViewUtils
 
 class MinutesAdapter (private val itemClickListener: (Int) -> Unit) :
