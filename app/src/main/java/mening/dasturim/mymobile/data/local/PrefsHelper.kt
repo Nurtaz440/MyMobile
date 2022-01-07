@@ -3,12 +3,17 @@ package mening.dasturim.mymobile.data.local
 import android.content.SharedPreferences
 import com.google.gson.Gson
 import mening.dasturim.mymobile.data.constants.Keys
+import mening.dasturim.mymobile.ui.CompanyState
 import mening.dasturim.mymobile.utils.put
 
 class PrefsHelper(
     private val gson: Gson,
     private val preferences: SharedPreferences
 ) {
+
+    var company:Int
+    get() = preferences.getInt(Keys.COMPANIES,CompanyState.uzmobile)
+    set(value)=preferences.put(Keys.COMPANIES,value)
 
     var language: String?
         get() = preferences.getString(Keys.LANGUAGE, null)

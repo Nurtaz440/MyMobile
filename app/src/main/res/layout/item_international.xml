@@ -27,9 +27,9 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 app:cardCornerRadius="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
 
                 >
 
@@ -57,10 +57,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintRight_toRightOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
                         app:srcCompat="@drawable/ic_arrow_down"
                         tools:ignore="ContentDescription"
                         />
@@ -80,16 +80,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             >
+
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cv_main"
+                style="@style/ShapeApperance_custom_top"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                style="@style/ShapeApperance_custom_top"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:elevation="10dp"
                 android:layout_marginBottom="8dp"
+                android:elevation="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
 
@@ -119,10 +120,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintRight_toRightOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
                         app:srcCompat="@drawable/ic_arrow_up"
                         tools:ignore="ContentDescription"
                         />
@@ -176,11 +177,13 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="4dp"
+                            android:ellipsize="end"
                             android:maxLines="1"
                             android:text="@string/tolov"
-                            android:textStyle="bold"
                             android:textColor="@color/black"
                             android:textSize="18sp"
+                            android:textStyle="bold"
                             />
 
                     </LinearLayout>
@@ -202,16 +205,19 @@
                             android:textColor="@color/black"
                             android:textSize="18sp"
                             />
+
                         <TextView
                             android:id="@+id/tv_inter_stop_oy"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="4dp"
+                            android:ellipsize="end"
                             android:maxLines="1"
                             android:text="@string/mobile_unit"
-                            android:textStyle="bold"
                             android:textColor="@color/black"
-                            android:textSize="14sp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
                             />
                     </LinearLayout>
 
@@ -232,16 +238,19 @@
                             android:textColor="@color/black"
                             android:textSize="18sp"
                             />
+
                         <TextView
                             android:id="@+id/tv_inter_stop_mb"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="4dp"
+                            android:ellipsize="end"
                             android:maxLines="1"
                             android:text="@string/deadline_day"
-                            android:textStyle="bold"
                             android:textColor="@color/black"
-                            android:textSize="14sp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
                             />
                     </LinearLayout>
 
@@ -252,12 +261,12 @@
                         android:layout_height="50dp"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="40dp"
-                        app:strokeColor="@color/deep_sky_blue_400"
-                        app:strokeWidth="1dp"
-                        app:cornerRadius="16dp"
                         android:text="@string/activiation"
                         android:textColor="@color/black"
                         app:backgroundTint="@android:color/white"
+                        app:cornerRadius="16dp"
+                        app:strokeColor="@color/deep_sky_blue_400"
+                        app:strokeWidth="1dp"
                         />
 
 
@@ -268,7 +277,6 @@
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

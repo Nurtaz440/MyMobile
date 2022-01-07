@@ -40,6 +40,9 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginStart="16dp"
                     android:text="@string/internet_non_stop2"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_marginEnd="4dp"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     />
@@ -177,6 +180,8 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:maxLines="1"
+                            android:ellipsize="end"
+                            android:layout_marginEnd="4dp"
                             android:text="@string/tolov"
                             android:textStyle="bold"
                             android:textColor="@color/black"
@@ -208,10 +213,12 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:maxLines="1"
+                            android:ellipsize="end"
+                            android:layout_marginEnd="4dp"
                             android:text="@string/mobile_unit"
                             android:textStyle="bold"
                             android:textColor="@color/black"
-                            android:textSize="14sp"
+                            android:textSize="16sp"
                             />
                     </LinearLayout>
 
@@ -238,10 +245,12 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:maxLines="1"
+                            android:ellipsize="end"
+                            android:layout_marginEnd="4dp"
                             android:text="@string/deadline_day"
                             android:textStyle="bold"
                             android:textColor="@color/black"
-                            android:textSize="14sp"
+                            android:textSize="16sp"
                             />
                     </LinearLayout>
 

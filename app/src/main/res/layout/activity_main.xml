@@ -104,7 +104,7 @@
         </com.google.android.material.appbar.AppBarLayout>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/nv_bottom"
+            android:id="@+id/nv_bottom_blue"
             style="@style/CustomCardTopCorners"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"

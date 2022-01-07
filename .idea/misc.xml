@@ -9,9 +9,27 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/bg_cv.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/bg_tab_rect.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/ic_account.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/ic_account_blue.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/ic_account_yellow.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/ic_beeline_logo.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/ic_call.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/ic_home_red.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/ic_home_yellow.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/ic_settings.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/ic_settings_blue.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/ic_settings_red.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/ic_settings_yellow.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/ic_user_blue.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/ic_user_red.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/nv_home_red.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/nv_home_yellow.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/nv_selected_color.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/nv_settings_blue.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/nv_settings_red.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/nv_settings_yellow.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/nv_user_blue.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/nv_user_red.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/nv_user_yellow.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/drawable/tab_selected.xml" value="0.21927083333333333" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/activity_main.xml" value="0.16259057971014493" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/bottom_nav_controller.xml" value="0.203125" />
@@ -19,7 +37,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_connect.xml" value="0.203125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_daily.xml" value="0.203125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_daily_sms.xml" value="0.19384057971014493" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_inter_nonstop.xml" value="0.203125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_international.xml" value="0.203125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_internet.xml" value="0.203125" />
@@ -29,6 +47,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_minuts.xml" value="0.203125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_nation.xml" value="0.203125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_non_stop.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_notification.xml" value="0.203125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_notification2.xml" value="0.203125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_privilege.xml" value="0.203125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/fragment_rate.xml" value="0.203125" />
@@ -57,10 +76,13 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/item_ussd.xml" value="0.19895833333333332" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/layout/item_viewpager.xml" value="0.203125" />
         <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/menu/menu_bottom.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/menu/menu_bottom_beeline.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/menu/menu_bottom_mobiuz.xml" value="0.203125" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/MyMobile/app/src/main/res/menu/menu_bottom_ucell.xml" value="0.203125" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_15" project-jdk-name="15" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15_PREVIEW" project-jdk-name="15" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

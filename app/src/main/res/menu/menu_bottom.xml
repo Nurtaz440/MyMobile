@@ -6,21 +6,21 @@
         android:id="@+id/home"
         android:title=""
         app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_home"
+        android:icon="@drawable/nv_selected_color"
         />
 
       <item
         android:id="@+id/connect"
         android:title=""
         app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_account"
+        android:icon="@drawable/nv_user_blue"
         />
 
       <item
         android:id="@+id/setting"
         android:title=""
         app:showAsAction="ifRoom"
-        android:icon="@drawable/ic_settings"
+        android:icon="@drawable/nv_settings_blue"
         />
 
 

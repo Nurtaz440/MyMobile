@@ -18,4 +18,6 @@ object Keys {
     const val BUNDLE_CHANGE_PPHONE_NUMBER="bundle_change_phone_number"
     const val BUNDLE_LOCATION_POSITION="bundle_location_position"
 
+    const val COMPANIES="companies"
+
 }

@@ -218,5 +218,4 @@ object ViewUtils {
             view.requestLayout()
         }
     }
-
 }

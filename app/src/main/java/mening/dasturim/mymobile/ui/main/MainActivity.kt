@@ -1,7 +1,11 @@
 package mening.dasturim.mymobile.ui.main
 
+import android.os.Build
+import android.util.Log
 import android.view.View
 import androidx.activity.viewModels
+import androidx.core.content.ContextCompat
+import androidx.lifecycle.Observer
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
@@ -9,14 +13,18 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import mening.dasturim.mymobile.R
 import mening.dasturim.mymobile.databinding.ActivityMainBinding
+import mening.dasturim.mymobile.ui.CompanyState
 import mening.dasturim.mymobile.ui.base.BaseActivity
 import mening.dasturim.mymobile.utils.ViewUtils
 
 class MainActivity : BaseActivity<ActivityMainBinding, MainVM>() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var navController: NavController
+    private lateinit var companyState:CompanyState
 
     override fun onBound() {
+        companyState=CompanyState
+        companyState.setCompany(0)
         setUp()
     }
 
@@ -26,16 +34,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainVM>() {
         if (navHost != null) {
             navController = navHost.findNavController()
         }
-        // bottomNavController=BottomNavController(binding,binding.partialBottomNavController,this,navController)
 
-        binding.nvBottom.setOnNavigationItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.home -> navController.navigate(R.id.homeFragment)
-                R.id.connect -> navController.navigate(R.id.connectFragment)
-                R.id.setting -> navController.navigate(R.id.settingsFragment)
-            }
-            true
-        }
 
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
@@ -44,9 +43,9 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainVM>() {
                 destination.id == R.id.connectFragment ||
                 destination.id == R.id.settingsFragment
             ) {
-                     ViewUtils.fadeIn(binding.nvBottom)
+                ViewUtils.fadeIn(binding.nvBottomBlue)
             } else {
-                   ViewUtils.fadeOut(binding.nvBottom)
+                ViewUtils.fadeOut(binding.nvBottomBlue)
             }
 
             if (destination.id == R.id.homeFragment
@@ -79,10 +78,62 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainVM>() {
                 R.id.settingsFragment -> binding.tvInfoName.setText(R.string.settings)
             }
         }
+
+        binding.nvBottomBlue.setOnNavigationItemSelectedListener { item ->
+
+            when (item.itemId) {
+                R.id.home ->{
+                    navController.navigate(R.id.homeFragment)
+
+                }
+                R.id.connect -> {
+                    navController.navigate(R.id.connectFragment)
+                }
+                R.id.setting ->{
+                    navController.navigate(R.id.settingsFragment)
+
+                }
+            }
+            true
+        }
+
+
+        companyState.getCompany().observe(this, Observer {
+            when (it) {
+                companyState.uzmobile -> {
+                    companyUzmobile()
+
+                }
+                companyState.mobiuz -> {
+                    companyMobiuz()
+                }
+                companyState.ucell -> {
+                    companyUcell()
+                }
+                companyState.beeline->{
+                    companyBeeline()
+                }
+
+            }
+        })
+
         binding.ivBackArrow.setOnClickListener { onBackPressed() }
 
     }
 
+    fun companyUzmobile(){
+        binding.nvBottomBlue.itemIconTintList  = ContextCompat.getColorStateList(this, R.color.deep_sky_blue_400)
+    }
+
+    fun companyMobiuz(){
+        binding.nvBottomBlue.itemIconTintList  = ContextCompat.getColorStateList(this, R.color.alizarin_700)
+    }
+    fun companyUcell(){
+        binding.nvBottomBlue.itemIconTintList  = ContextCompat.getColorStateList(this, R.color.vivid_violet_800)
+    }
+    fun companyBeeline(){
+        binding.nvBottomBlue.itemIconTintList  = ContextCompat.getColorStateList(this, R.color.gorse_600)
+    }
 
     override fun getLayoutResId() = R.layout.activity_main
 

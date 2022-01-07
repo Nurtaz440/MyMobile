@@ -176,10 +176,11 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:maxLines="1"
-                            android:text="@string/tolov"
+                            android:layout_marginEnd="4dp"
+                            android:ellipsize="end"                            android:text="@string/tolov"
                             android:textStyle="bold"
                             android:textColor="@color/black"
-                            android:textSize="16sp"
+                            android:textSize="18sp"
                             />
 
                     </LinearLayout>
@@ -207,10 +208,11 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:maxLines="1"
-                            android:text="@string/unit"
+                            android:layout_marginEnd="4dp"
+                            android:ellipsize="end"                            android:text="@string/unit"
                             android:textStyle="bold"
                             android:textColor="@color/black"
-                            android:textSize="14sp"
+                            android:textSize="16sp"
                             />
 
                     </LinearLayout>
@@ -232,16 +234,18 @@
                             android:textColor="@color/black"
                             android:textSize="18sp"
                             />
+
                         <TextView
                             android:id="@+id/tv_privilege_internet"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:maxLines="1"
-                            android:text="@string/mobile_unit"
-                            android:textStyle="bold"
+                            android:layout_marginEnd="4dp"
+                            android:ellipsize="end"                            android:text="@string/mobile_unit"
                             android:textColor="@color/black"
-                            android:textSize="14sp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
                             />
                     </LinearLayout>
 
@@ -262,16 +266,18 @@
                             android:textColor="@color/black"
                             android:textSize="18sp"
                             />
+
                         <TextView
                             android:id="@+id/tv_privilege_call"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:maxLines="1"
-                            android:text="@string/mobile_unit"
-                            android:textStyle="bold"
+                            android:layout_marginEnd="4dp"
+                            android:ellipsize="end"                            android:text="@string/mobile_unit"
                             android:textColor="@color/black"
-                            android:textSize="14sp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
                             />
                     </LinearLayout>
 
@@ -292,15 +298,17 @@
                             android:textColor="@color/black"
                             android:textSize="18sp"
                             />
+
                         <TextView
                             android:id="@+id/tv_privilege_message"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:maxLines="1"
-                            android:text="@string/mobile_unit"
-                            android:textStyle="bold"
+                            android:layout_marginEnd="4dp"
+                            android:ellipsize="end"                            android:text="@string/mobile_unit"
                             android:textColor="@color/black"
-                            android:textSize="14sp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
                             />
                     </LinearLayout>
 
