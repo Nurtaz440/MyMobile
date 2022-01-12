@@ -1,8 +1,11 @@
 package mening.dasturim.mymobile.ui.main.user.home
 
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.util.Log
+import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -13,7 +16,6 @@ import mening.dasturim.mymobile.data.constants.Constants
 import mening.dasturim.mymobile.databinding.FragmentHomeBinding
 import mening.dasturim.mymobile.ui.CompanyState
 import mening.dasturim.mymobile.ui.base.BaseFragment
-import mening.dasturim.mymobile.utils.ViewUtils
 
 class HomeFragment : BaseFragment<FragmentHomeBinding, HomeVM>() {
     private lateinit var navController: NavController
@@ -88,30 +90,40 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeVM>() {
             findNavController().navigate(R.id.servicesFragment)
         }
 
-
-
-        binding.cvCall.setOnClickListener {
-            val intent = Intent(Intent.ACTION_DIAL)
-            intent.data = Uri.fromParts("tel", Constants.CALL_CENTER_NUMBER_UZMOBILE, null)
-            startActivity(intent)
-
-        }
     }
 
     fun companyUzmobile() {
         //card color
-        binding.cvItem.setCardBackgroundColor(ContextCompat.getColorStateList(requireContext(),R.color.deep_sky_blue_100))
-        binding.ivCall.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.deep_sky_blue_400))
-        binding.ivBallans.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.deep_sky_blue_400))
-        binding.cvLogoLarge.setImageDrawable(ContextCompat.getDrawable(requireContext(),R.drawable.ic_uzmobile_logo))
+        binding.cvItem.setCardBackgroundColor(
+            ContextCompat.getColorStateList(
+                requireContext(),
+                R.color.deep_sky_blue_100
+            )
+        )
+        binding.ivCall.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.deep_sky_blue_400))
+        binding.ivBallans.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.deep_sky_blue_400))
+        binding.cvLogoLarge.setImageDrawable(
+            ContextCompat.getDrawable(
+                requireContext(),
+                R.drawable.ic_uzmobile_logo
+            )
+        )
 
         //icon color
-        binding.ivTariflar.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.deep_sky_blue_400))
-        binding.ivInternet.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.deep_sky_blue_400))
-        binding.ivMassage.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.deep_sky_blue_400))
-        binding.ivMinuts.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.deep_sky_blue_400))
-        binding.ivUssd.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.deep_sky_blue_400))
-        binding.ivServices.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.deep_sky_blue_400))
+        binding.ivTariflar.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.deep_sky_blue_400))
+        binding.ivInternet.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.deep_sky_blue_400))
+        binding.ivMassage.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.deep_sky_blue_400))
+        binding.ivMinuts.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.deep_sky_blue_400))
+        binding.ivUssd.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.deep_sky_blue_400))
+        binding.ivServices.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.deep_sky_blue_400))
 
         //stroke should be
         binding.cvUzmobile.strokeColor = ContextCompat.getColor(
@@ -126,10 +138,40 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeVM>() {
 
         //call number
         binding.cvCall.setOnClickListener {
-            val intent = Intent(Intent.ACTION_DIAL)
-            intent.data =
-                Uri.fromParts("tel", Constants.CALL_CENTER_NUMBER_UZMOBILE, null)
-            startActivity(intent)
+            val intent = Intent(Intent.ACTION_CALL)
+            intent.data = Uri.parse("tel: %s" + Constants.CALL_CENTER_NUMBER_UZMOBILE)
+            if (ContextCompat.checkSelfPermission(
+                    requireActivity(),
+                    Manifest.permission.CALL_PHONE
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                ActivityCompat.requestPermissions(
+                    requireActivity(),
+                    arrayOf(Manifest.permission.CALL_PHONE),
+                    1
+                )
+            } else {
+                startActivity(intent)
+            }
+
+        }
+        //call number
+        binding.cvBalans.setOnClickListener {
+            val intent = Intent(Intent.ACTION_CALL)
+            intent.data = Uri.parse("tel:" + Uri.encode(Constants.CALL_BALANS))
+            if (ContextCompat.checkSelfPermission(
+                    requireActivity(),
+                    Manifest.permission.CALL_PHONE
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                ActivityCompat.requestPermissions(
+                    requireActivity(),
+                    arrayOf(Manifest.permission.CALL_PHONE),
+                    4
+                )
+            } else {
+                startActivity(intent)
+            }
 
         }
 
@@ -141,18 +183,36 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeVM>() {
 
     fun companyMobiuz() {
         //card color
-        binding.cvItem.setCardBackgroundColor(ContextCompat.getColorStateList(requireContext(),R.color.alizarin_100))
-        binding.ivCall.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.alizarin_700))
-        binding.ivBallans.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.alizarin_700))
-        binding.cvLogoLarge.setImageDrawable(ContextCompat.getDrawable(requireContext(),R.drawable.ic_mobiuz_logo))
+        binding.cvItem.setCardBackgroundColor(
+            ContextCompat.getColorStateList(
+                requireContext(),
+                R.color.alizarin_100
+            )
+        )
+        binding.ivCall.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.alizarin_700))
+        binding.ivBallans.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.alizarin_700))
+        binding.cvLogoLarge.setImageDrawable(
+            ContextCompat.getDrawable(
+                requireContext(),
+                R.drawable.ic_mobiuz_logo
+            )
+        )
 
         //icon color
-        binding.ivTariflar.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.alizarin_700))
-        binding.ivInternet.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.alizarin_700))
-        binding.ivMassage.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.alizarin_700))
-        binding.ivMinuts.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.alizarin_700))
-        binding.ivUssd.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.alizarin_700))
-        binding.ivServices.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.alizarin_700))
+        binding.ivTariflar.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.alizarin_700))
+        binding.ivInternet.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.alizarin_700))
+        binding.ivMassage.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.alizarin_700))
+        binding.ivMinuts.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.alizarin_700))
+        binding.ivUssd.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.alizarin_700))
+        binding.ivServices.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.alizarin_700))
 
         //stroke should be
         binding.cvMobiuz.strokeColor = ContextCompat.getColor(
@@ -172,29 +232,77 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeVM>() {
 
         //call number
         binding.cvCall.setOnClickListener {
-            val intent = Intent(Intent.ACTION_DIAL)
-            intent.data =
-                Uri.fromParts("tel", Constants.CALL_CENTER_NUMBER_MOBIEUZ, null)
-            startActivity(intent)
+            val intent = Intent(Intent.ACTION_CALL)
+            intent.data = Uri.parse("tel: %s" + Constants.CALL_CENTER_NUMBER_MOBIEUZ)
+            if (ContextCompat.checkSelfPermission(
+                    requireActivity(),
+                    Manifest.permission.CALL_PHONE
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                ActivityCompat.requestPermissions(
+                    requireActivity(),
+                    arrayOf(Manifest.permission.CALL_PHONE),
+                    1
+                )
+            } else {
+                startActivity(intent)
+            }
 
+        }
+        //call number
+        binding.cvBalans.setOnClickListener {
+            val intent = Intent(Intent.ACTION_CALL)
+            intent.data = Uri.parse("tel: " +Uri.encode(Constants.CALL_BALANS))
+            if (ContextCompat.checkSelfPermission(
+                    requireActivity(),
+                    Manifest.permission.CALL_PHONE
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                ActivityCompat.requestPermissions(
+                    requireActivity(),
+                    arrayOf(Manifest.permission.CALL_PHONE),
+                    4
+                )
+            } else {
+                startActivity(intent)
+            }
 
         }
     }
 
+
     fun companyUcell() {
         //card color
-        binding.cvItem.setCardBackgroundColor(ContextCompat.getColorStateList(requireContext(),R.color.vivid_violet_100))
-        binding.ivCall.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.vivid_violet_800))
-        binding.ivBallans.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.vivid_violet_800))
-        binding.cvLogoLarge.setImageDrawable(ContextCompat.getDrawable(requireContext(),R.drawable.ic_ucell_logo))
+        binding.cvItem.setCardBackgroundColor(
+            ContextCompat.getColorStateList(
+                requireContext(),
+                R.color.vivid_violet_100
+            )
+        )
+        binding.ivCall.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.vivid_violet_800))
+        binding.ivBallans.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.vivid_violet_800))
+        binding.cvLogoLarge.setImageDrawable(
+            ContextCompat.getDrawable(
+                requireContext(),
+                R.drawable.ic_ucell_logo
+            )
+        )
 
         //icon color
-        binding.ivTariflar.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.vivid_violet_800))
-        binding.ivInternet.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.vivid_violet_800))
-        binding.ivMassage.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.vivid_violet_800))
-        binding.ivMinuts.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.vivid_violet_800))
-        binding.ivUssd.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.vivid_violet_800))
-        binding.ivServices.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.vivid_violet_800))
+        binding.ivTariflar.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.vivid_violet_800))
+        binding.ivInternet.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.vivid_violet_800))
+        binding.ivMassage.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.vivid_violet_800))
+        binding.ivMinuts.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.vivid_violet_800))
+        binding.ivUssd.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.vivid_violet_800))
+        binding.ivServices.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.vivid_violet_800))
 
         //stroke should be
         binding.cvUcell.strokeColor = ContextCompat.getColor(
@@ -209,30 +317,78 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeVM>() {
         //text should be
         binding.tvMain.setText(R.string.ucell)
         binding.tvNumber.setText(R.string.call_center_number_ucell)
-
         //call number
         binding.cvCall.setOnClickListener {
-            val intent = Intent(Intent.ACTION_DIAL)
-            intent.data = Uri.fromParts("tel", Constants.CALL_CENTER_NUMBER_UCELL, null)
-            startActivity(intent)
+            val intent = Intent(Intent.ACTION_CALL)
+            intent.data = Uri.parse("tel: %s" + Constants.CALL_CENTER_NUMBER_UCELL)
+            if (ContextCompat.checkSelfPermission(
+                    requireActivity(),
+                    Manifest.permission.CALL_PHONE
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                ActivityCompat.requestPermissions(
+                    requireActivity(),
+                    arrayOf(Manifest.permission.CALL_PHONE),
+                    1
+                )
+            } else {
+                startActivity(intent)
+            }
+
+        }
+        //call number
+        binding.cvBalans.setOnClickListener {
+            val intent = Intent(Intent.ACTION_CALL)
+            intent.data = Uri.parse("tel:" +Uri.encode(Constants.CALL_BALANS))
+            if (ContextCompat.checkSelfPermission(
+                    requireActivity(),
+                    Manifest.permission.CALL_PHONE
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                ActivityCompat.requestPermissions(
+                    requireActivity(),
+                    arrayOf(Manifest.permission.CALL_PHONE),
+                    4
+                )
+            } else {
+                startActivity(intent)
+            }
 
         }
     }
 
     fun companyBeeline() {
         //card Color
-        binding.cvItem.setCardBackgroundColor(ContextCompat.getColorStateList(requireContext(),R.color.gorse_100))
-        binding.ivCall.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.gorse_600))
-        binding.ivBallans.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.gorse_600))
-        binding.cvLogoLarge.setImageDrawable(ContextCompat.getDrawable(requireContext(),R.drawable.ic_beeline_logo))
+        binding.cvItem.setCardBackgroundColor(
+            ContextCompat.getColorStateList(
+                requireContext(),
+                R.color.gorse_100
+            )
+        )
+        binding.ivCall.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.gorse_600))
+        binding.ivBallans.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.gorse_600))
+        binding.cvLogoLarge.setImageDrawable(
+            ContextCompat.getDrawable(
+                requireContext(),
+                R.drawable.ic_beeline_logo
+            )
+        )
 
         //icon Color
-        binding.ivTariflar.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.gorse_600))
-        binding.ivInternet.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.gorse_600))
-        binding.ivMassage.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.gorse_600))
-        binding.ivMinuts.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.gorse_600))
-        binding.ivUssd.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.gorse_600))
-        binding.ivServices.imageTintList=(ContextCompat.getColorStateList(requireContext(),R.color.gorse_600))
+        binding.ivTariflar.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.gorse_600))
+        binding.ivInternet.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.gorse_600))
+        binding.ivMassage.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.gorse_600))
+        binding.ivMinuts.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.gorse_600))
+        binding.ivUssd.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.gorse_600))
+        binding.ivServices.imageTintList =
+            (ContextCompat.getColorStateList(requireContext(), R.color.gorse_600))
 
         //stroke should be
         binding.cvBeeline.strokeColor = ContextCompat.getColor(
@@ -250,11 +406,40 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeVM>() {
 
         //call number
         binding.cvCall.setOnClickListener {
-            val intent = Intent(Intent.ACTION_DIAL)
-            intent.data =
-                Uri.fromParts("tel", Constants.CALL_CENTER_NUMBER_BEELINE, null)
-            startActivity(intent)
+            val intent = Intent(Intent.ACTION_CALL)
+            intent.data = Uri.parse("tel:" + Constants.CALL_CENTER_NUMBER_BEELINE)
+            if (ContextCompat.checkSelfPermission(
+                    requireActivity(),
+                    Manifest.permission.CALL_PHONE
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                ActivityCompat.requestPermissions(
+                    requireActivity(),
+                    arrayOf(Manifest.permission.CALL_PHONE),
+                    1
+                )
+            } else {
+                startActivity(intent)
+            }
 
+        }
+        //call number
+        binding.cvBalans.setOnClickListener {
+            val intent = Intent(Intent.ACTION_CALL)
+            intent.data = Uri.parse("tel:" +Uri.encode(Constants.CALL_BALANS))
+            if (ContextCompat.checkSelfPermission(
+                    requireActivity(),
+                    Manifest.permission.CALL_PHONE
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                ActivityCompat.requestPermissions(
+                    requireActivity(),
+                    arrayOf(Manifest.permission.CALL_PHONE),
+                    4
+                )
+            } else {
+                startActivity(intent)
+            }
 
         }
     }

@@ -105,7 +105,6 @@
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/nv_bottom_blue"
-            style="@style/CustomCardTopCorners"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@drawable/bg_btn_top"
@@ -115,6 +114,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
             app:menu="@menu/menu_bottom"
+            app:itemIconTint="@color/grey_400"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

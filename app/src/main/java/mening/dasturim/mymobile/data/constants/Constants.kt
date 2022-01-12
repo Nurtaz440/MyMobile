@@ -18,6 +18,8 @@ object Constants {
     const val CALL_CENTER_NUMBER_UCELL = "8123"
     const val CALL_CENTER_NUMBER_BEELINE = "0611"
 
+    const val   CALL_BALANS="*100#"
+
     fun getRateItems(): ArrayList<RateItem> {
         return arrayListOf(
             RateItem(
