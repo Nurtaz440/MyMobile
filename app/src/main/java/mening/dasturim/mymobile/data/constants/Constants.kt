@@ -19,6 +19,7 @@ object Constants {
     const val CALL_CENTER_NUMBER_BEELINE = "0611"
 
     const val   CALL_BALANS="*100#"
+    const val   CALL_BALANS_BEELINE="*102#"
 
     fun getRateItems(): ArrayList<RateItem> {
         return arrayListOf(
@@ -588,6 +589,16 @@ fun getM2MItems(): ArrayList<RateItem> {
             SettingsItems(R.string.menga_qongiroq_qil),
             SettingsItems(R.string.muzzone),
             SettingsItems(R.string.esim)
+        )
+    }
+    fun getHomeItems():ArrayList<HomeItems>{
+       return arrayListOf(
+            HomeItems(R.drawable.ic_rate,R.string.tariflar),
+            HomeItems(R.drawable.ic_internet_pockets,R.string.internet_paketlar),
+            HomeItems(R.drawable.ic_call_add,R.string.daqiqalar),
+            HomeItems(R.drawable.ic_message,R.string.sms_paketlar),
+            HomeItems(R.drawable.ic_ussd_code,R.string.ussd_kodlar),
+            HomeItems(R.drawable.ic_service,R.string.xizmatlar)
         )
     }
 }

@@ -31,7 +31,6 @@
                 android:text="@string/internet_non_stop2"
                 android:textAlignment="center"
                 android:textColor="@color/black"
-                android:backgroundTint="@color/deep_sky_blue_100"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"

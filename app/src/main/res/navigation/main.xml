@@ -37,7 +37,7 @@
         tools:layout="@layout/fragment_services" />
     <fragment
         android:id="@+id/USSDFragment"
-        android:name="mening.dasturim.mymobile.ui.main.user.ussd.USSDFragment"
+        android:name="mening.dasturim.mymobile.ui.main.user.ussd.UssdFragment"
         android:label="fragment_u_s_s_d"
         tools:layout="@layout/fragment_u_s_s_d" />
     <fragment
@@ -49,4 +49,9 @@
         android:id="@+id/connectFragment"
         android:name="mening.dasturim.mymobile.ui.main.user.connect.ConnectFragment"
         android:label="ConnectFragment" />
+    <fragment
+        android:id="@+id/profiteFragment"
+        android:name="mening.dasturim.mymobile.ui.main.user.services.profite.ProfiteFragment"
+        android:label="fragment_profite"
+        tools:layout="@layout/fragment_profite" />
 </navigation>

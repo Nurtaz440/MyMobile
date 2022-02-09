@@ -11,28 +11,42 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import mening.dasturim.mymobile.R
 import mening.dasturim.mymobile.data.module.RateItem
-import mening.dasturim.mymobile.databinding.ItemNationBinding
+import mening.dasturim.mymobile.databinding.ItemUnitsBinding
 import mening.dasturim.mymobile.utils.ViewUtils
 
-class NationAdapter(private val itemClickListener: (Int) -> Unit) :
+class NationAdapter(val context:Context,private val itemClickListener: (Int) -> Unit) :
     RecyclerView.Adapter<NationAdapter.VH>() {
     private var arrayList= listOf<RateItem>()
+    private var colorIcon:Int=R.color.deep_sky_blue_400
+    private var bgColor:Int=R.color.deep_sky_blue_100
 
     @SuppressLint("NotifyDataSetChanged")
     fun setData(itemList : List<RateItem>){
         this.arrayList=itemList
         notifyDataSetChanged()
     }
+    fun setColor(colorIconList:Int){
+        this.colorIcon=colorIconList
+    }
+    fun setColorLight(color:Int){
+        this.bgColor= color
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
         val inflater= LayoutInflater.from(parent.context)
         val binding =
-            DataBindingUtil.inflate<ItemNationBinding>(inflater, R.layout.item_nation,parent,false)
+            DataBindingUtil.inflate<ItemUnitsBinding>(inflater, R.layout.item_units,parent,false)
         return VH(binding,parent.context)
     }
 
     @SuppressLint("NotifyDataSetChanged")
     override fun onBindViewHolder(holder: VH, position: Int) {
+        holder.binding.ivArrowDown.setColorFilter(ContextCompat.getColor(context,colorIcon))
+        holder.binding.ivArrowUp.setColorFilter(ContextCompat.getColor(context,colorIcon))
+        holder.binding.mbActivation.setStrokeColorResource(colorIcon)
+        holder.binding.mcvMain.setCardBackgroundColor(ContextCompat.getColor(context,bgColor))
+
+
         val isVisibile:Boolean=arrayList[position].expanded
 
         holder.cvExpanded.visibility = if (isVisibile){
@@ -56,7 +70,7 @@ class NationAdapter(private val itemClickListener: (Int) -> Unit) :
 
     override fun getItemCount()=arrayList.size
 
-    class VH(private val binding: ItemNationBinding, private val context: Context)
+    class VH(val binding: ItemUnitsBinding, private val context: Context)
         : RecyclerView.ViewHolder(binding.root){
 
         var downBtn: ConstraintLayout = binding.clArrowDown
@@ -80,13 +94,13 @@ class NationAdapter(private val itemClickListener: (Int) -> Unit) :
         fun onBind(rate : RateItem){
             binding.apply {
                 ivArrowDown.setImageDrawable(ContextCompat.getDrawable(context,rate.image))
-                tvNationName.setText(rate.name)
-                tvNationName2.setText(rate.name)
-                tvNationAbonent.setText(rate.abonent)
-                tvNationLimit.setText(rate.limit)
-                tvNationInternet.setText(rate.internet)
-                tvNationMesssage.setText(rate.message)
-                tvNationCall.setText(rate.call)
+                tvUnitsName.setText(rate.name)
+                tvUnitsName2.setText(rate.name)
+                tvUnitsAbonent.setText(rate.abonent)
+                tvUnitsLimit.setText(rate.limit)
+                tvUnitsInternet.setText(rate.internet)
+                tvUnitsMesssage.setText(rate.message)
+                tvUnitsCall.setText(rate.call)
 
             }
         }

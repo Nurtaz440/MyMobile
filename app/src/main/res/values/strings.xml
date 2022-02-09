@@ -42,6 +42,7 @@
 
     <string name="account">Bog\'lanish</string>
     <string name="settings">Xizmatlar</string>
+    <string name="profite">Foydali almashinuv</string>
 
     <!--text of rate -->
     <string name="units">UNITS</string>
@@ -363,7 +364,7 @@ hizmatlarini o\‘chirish</string>
     <string name="ulashish">Ulashish</string>
     <string name="baho">Baho berish</string>
     <string name="boglanish">Biz bilan bog\'lanish</string>
-    
+
     <!-- xizmatlar-->
     <string name="foydali_almashinuv">Foydali almashinuv</string>
     <string name="limitsiz_ovoz">"Limitsiz ovoz” xizmati</string>
@@ -386,5 +387,7 @@ hizmatlarini o\‘chirish</string>
     <string name="menga_qongiroq_qil">Menga qo\‘ng\‘iroq qiling</string>
     <string name="muzzone">MuzZone</string>
     <string name="esim">eSIM</string>
+
+    <string name="leave">Chiqish uchun ikki marta bosing</string>
 
 </resources>

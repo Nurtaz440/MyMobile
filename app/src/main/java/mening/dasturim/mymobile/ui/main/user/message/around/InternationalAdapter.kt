@@ -14,15 +14,25 @@ import mening.dasturim.mymobile.data.module.NonStopItem
 import mening.dasturim.mymobile.databinding.ItemInternationalBinding
 import mening.dasturim.mymobile.utils.ViewUtils
 
-class InternationalAdapter (private val itemClickListener: (Int) -> Unit) :
+class InternationalAdapter ( val context: Context, private val itemClickListener: (Int) -> Unit) :
     RecyclerView.Adapter<InternationalAdapter.VH>() {
     private var arrayList= listOf<NonStopItem>()
+    private var colorIcon:Int=R.color.deep_sky_blue_400
+    private var bgColor:Int=R.color.deep_sky_blue_100
+
 
     fun setData(itemList : List<NonStopItem>){
         this.arrayList=itemList
         notifyDataSetChanged()
     }
-
+    fun setColor(colorList:Int){
+        this.colorIcon=colorList
+        notifyDataSetChanged()
+    }
+    fun setColorLight(color:Int){
+        this.bgColor=color
+        notifyDataSetChanged()
+    }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
         val inflater= LayoutInflater.from(parent.context)
         val binding =
@@ -32,6 +42,11 @@ class InternationalAdapter (private val itemClickListener: (Int) -> Unit) :
 
     @SuppressLint("NotifyDataSetChanged")
     override fun onBindViewHolder(holder: VH, position: Int) {
+        holder.binding.ivArrowUp.setColorFilter(ContextCompat.getColor(context,colorIcon))
+        holder.binding.ivArrowDown.setColorFilter(ContextCompat.getColor(context,colorIcon))
+        holder.binding.mbActivation.setStrokeColorResource(colorIcon)
+        holder.binding.mcvMain.setCardBackgroundColor(ContextCompat.getColor(context,bgColor))
+
         val isVisibile:Boolean=arrayList[position].expanded
 
         holder.cvExpanded.visibility = if (isVisibile){
@@ -55,7 +70,7 @@ class InternationalAdapter (private val itemClickListener: (Int) -> Unit) :
 
     override fun getItemCount()=arrayList.size
 
-    class VH(private val binding: ItemInternationalBinding, private val context: Context)
+    class VH( val binding: ItemInternationalBinding, private val context: Context)
         : RecyclerView.ViewHolder(binding.root){
 
         var downBtn: ConstraintLayout = binding.clArrowDown

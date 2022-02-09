@@ -1,10 +1,14 @@
 package mening.dasturim.mymobile.ui.main.user.rate
 
+import androidx.core.content.ContextCompat
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
 import mening.dasturim.mymobile.R
 import mening.dasturim.mymobile.databinding.FragmentRateBinding
+import mening.dasturim.mymobile.ui.Companies
+import mening.dasturim.mymobile.ui.CompanyState
 import mening.dasturim.mymobile.ui.base.BaseFragment
 
 class RateFragment : BaseFragment<FragmentRateBinding, RateVM>() {
@@ -22,6 +26,21 @@ class RateFragment : BaseFragment<FragmentRateBinding, RateVM>() {
         binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Imtiyozli"))
         binding.tabLayout.addTab(binding.tabLayout.newTab().setText("M2M"))
 
+        CompanyState.getCompany().observe(this, Observer {
+            if (it != null){
+                when(it){
+                    Companies.UZMOBILE -> binding.tabLayout.setSelectedTabIndicatorColor(resources.getColor(R.color.deep_sky_blue_400))
+                    Companies.MOBIUZ -> binding.tabLayout.setSelectedTabIndicatorColor(resources.getColor(R.color.alizarin_700))
+                    Companies.UCELL -> binding.tabLayout.setSelectedTabIndicatorColor(resources.getColor(R.color.vivid_violet_800))
+                    Companies.BEELINE -> binding.tabLayout.setSelectedTabIndicatorColor(resources.getColor(R.color.gorse_600))
+                }
+
+            }else{
+                CompanyState.setCompany(Companies.UZMOBILE)
+                prefs.company=Companies.UZMOBILE.name
+            }
+
+        })
 
         fragmentAdapter = ViewPagerAdapter(requireFragmentManager(), requireActivity().lifecycle)
 

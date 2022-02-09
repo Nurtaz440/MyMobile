@@ -2,6 +2,7 @@ package mening.dasturim.mymobile.ui.main.user.services
 
 
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import mening.dasturim.mymobile.R
@@ -16,7 +17,9 @@ class ServicesFragment  : BaseFragment<FragmentServicesBinding, ServicesVM>() {
     }
 
     fun setUp(){
-        internetAdapter= ServiceAdapter {  }
+        internetAdapter= ServiceAdapter {
+            findNavController().navigate(R.id.profiteFragment)
+        }
 
 
         internetAdapter.setData(Constants.getServiceItems())

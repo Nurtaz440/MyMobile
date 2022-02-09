@@ -11,27 +11,44 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import mening.dasturim.mymobile.R
 import mening.dasturim.mymobile.data.module.NonStopItem
-import mening.dasturim.mymobile.databinding.ItemNonStopBinding
+import mening.dasturim.mymobile.databinding.ItemTasixBinding
 import mening.dasturim.mymobile.utils.ViewUtils
 
-class NonStopAdapter (private val itemClickListener: (Int) -> Unit) :
+class NonStopAdapter ( val context: Context, private val itemClickListener: (Int) -> Unit) :
     RecyclerView.Adapter<NonStopAdapter.VH>() {
     private var arrayList= listOf<NonStopItem>()
+    private var colorIcon:Int=R.color.deep_sky_blue_400
+    private var bgColor:Int=R.color.deep_sky_blue_100
+
 
     fun setData(itemList : List<NonStopItem>){
         this.arrayList=itemList
+        notifyDataSetChanged()
+    }
+    fun setColor(colorList:Int){
+        this.colorIcon=colorList
+        notifyDataSetChanged()
+    }
+    fun setColorLight(color:Int){
+        this.bgColor=color
         notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
         val inflater= LayoutInflater.from(parent.context)
         val binding =
-            DataBindingUtil.inflate<ItemNonStopBinding>(inflater, R.layout.item_non_stop,parent,false)
+            DataBindingUtil.inflate<ItemTasixBinding>(inflater, R.layout.item_tasix,parent,false)
         return VH(binding,parent.context)
     }
 
     @SuppressLint("NotifyDataSetChanged")
     override fun onBindViewHolder(holder: VH, position: Int) {
+        holder.binding.ivArrowUp.setColorFilter(ContextCompat.getColor(context,colorIcon))
+        holder.binding.ivArrowDown.setColorFilter(ContextCompat.getColor(context,colorIcon))
+        holder.binding.mbActivation.setStrokeColorResource(colorIcon)
+        holder.binding.mcvMain.setCardBackgroundColor(ContextCompat.getColor(context,bgColor))
+
+
         val isVisibile:Boolean=arrayList[position].expanded
 
         holder.cvExpanded.visibility = if (isVisibile){
@@ -55,7 +72,7 @@ class NonStopAdapter (private val itemClickListener: (Int) -> Unit) :
 
     override fun getItemCount()=arrayList.size
 
-    class VH(private val binding: ItemNonStopBinding, private val context: Context)
+    class VH( val binding: ItemTasixBinding, private val context: Context)
         : RecyclerView.ViewHolder(binding.root){
 
         var downBtn: ConstraintLayout = binding.clArrowDown
@@ -79,11 +96,11 @@ class NonStopAdapter (private val itemClickListener: (Int) -> Unit) :
         fun onBind(rate : NonStopItem){
             binding.apply {
                 ivArrowDown.setImageDrawable(ContextCompat.getDrawable(context,rate.image))
-                tvNonStopName.setText(rate.name)
-                tvNonStopName2.setText(rate.name)
-                tvNonStopLimit.setText(rate.pay)
-                tvNonStopAbonent.setText(rate.price)
-                tvNonStopInternet.setText(rate.internet)
+                tvTasixName.setText(rate.name)
+                tvTasixName2.setText(rate.name)
+                tvTasixAbonent.setText(rate.pay)
+                tvTasixMb.setText(rate.price)
+                tvTasixDeadline.setText(rate.internet)
 
             }
         }

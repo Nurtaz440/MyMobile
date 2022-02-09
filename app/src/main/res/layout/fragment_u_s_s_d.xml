@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/whiter"
-        tools:context=".ui.main.user.ussd.USSDFragment"
+        tools:context=".ui.main.user.ussd.UssdFragment"
         >
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_internet"

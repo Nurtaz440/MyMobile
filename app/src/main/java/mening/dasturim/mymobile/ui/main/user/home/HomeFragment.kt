@@ -11,20 +11,18 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import mening.dasturim.mymobile.R
 import mening.dasturim.mymobile.data.constants.Constants
 import mening.dasturim.mymobile.databinding.FragmentHomeBinding
+import mening.dasturim.mymobile.ui.Companies
 import mening.dasturim.mymobile.ui.CompanyState
 import mening.dasturim.mymobile.ui.base.BaseFragment
 
 class HomeFragment : BaseFragment<FragmentHomeBinding, HomeVM>() {
     private lateinit var navController: NavController
-    private lateinit var companyState: CompanyState
-
-
+    private lateinit var homeAdapter: HomeAdapter
     override fun onBound() {
-        companyState = CompanyState
-        companyState.setCompany(0)
         setUp()
 
     }
@@ -36,58 +34,69 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeVM>() {
             navController = navHost.findNavController()
         }
 
-        companyState.getCompany().observe(viewLifecycleOwner, Observer {
+        CompanyState.getCompany().observe(this, Observer {
             Log.d("Observe", it.toString())
             when (it) {
-                companyState.uzmobile -> {
+                Companies.UZMOBILE -> {
+                    homeAdapter.setColor(R.color.deep_sky_blue_400)
                     companyUzmobile()
 
                 }
-                companyState.mobiuz -> {
+                Companies.MOBIUZ -> {
+                    homeAdapter.setColor(R.color.alizarin_700)
                     companyMobiuz()
+
                 }
-                companyState.ucell -> {
+                Companies.UCELL -> {
+                    homeAdapter.setColor(R.color.vivid_violet_800)
                     companyUcell()
+
+
                 }
-                companyState.beeline -> {
+                Companies.BEELINE -> {
+                    homeAdapter.setColor(R.color.gorse_600)
                     companyBeeline()
+
                 }
             }
         })
+        homeAdapter = HomeAdapter(requireContext()) {
+            when (it) {
+                0 -> findNavController().navigate(R.id.rateFragment)
+                1 -> findNavController().navigate(R.id.internetPocketsFragment)
+                2 -> findNavController().navigate(R.id.minutesFragment)
+                3 -> findNavController().navigate(R.id.messageFragment)
+                4 -> findNavController().navigate(R.id.USSDFragment)
+                5 -> findNavController().navigate(R.id.servicesFragment)
+
+            }
+        }
+        homeAdapter.setData(Constants.getHomeItems())
+
+        binding.rvMain.apply {
+            layoutManager = GridLayoutManager(requireContext(), 2)
+            adapter = homeAdapter
+
+        }
 
         binding.cvUzmobile.setOnClickListener {
-            companyState.setCompany(0)
+            prefs.company = Companies.UZMOBILE.name
+            CompanyState.setCompany(Companies.UZMOBILE)
         }
         binding.cvMobiuz.setOnClickListener {
-            companyState.setCompany(1)
+            prefs.company = Companies.MOBIUZ.name
+            CompanyState.setCompany(Companies.MOBIUZ)
+
         }
         binding.cvUcell.setOnClickListener {
-            companyState.setCompany(2)
+            prefs.company = Companies.UCELL.name
+            CompanyState.setCompany(Companies.UCELL)
+
         }
         binding.cvBeeline.setOnClickListener {
-            companyState.setCompany(3)
-        }
+            prefs.company = Companies.BEELINE.name
+            CompanyState.setCompany(Companies.BEELINE)
 
-        //navigate Uzmobile
-        binding.cvIconBlue.setOnClickListener {
-            findNavController().navigate(R.id.rateFragment)
-        }
-        binding.cvIconBlue2.setOnClickListener {
-            findNavController().navigate(R.id.internetPocketsFragment)
-        }
-
-        binding.cvIconBlue3.setOnClickListener {
-            findNavController().navigate(R.id.minutesFragment)
-        }
-        binding.cvIconBlue4.setOnClickListener {
-            findNavController().navigate(R.id.messageFragment)
-        }
-
-        binding.cvIconBlue5.setOnClickListener {
-            findNavController().navigate(R.id.USSDFragment)
-        }
-        binding.cvIconBlue6.setOnClickListener {
-            findNavController().navigate(R.id.servicesFragment)
         }
 
     }
@@ -110,20 +119,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeVM>() {
                 R.drawable.ic_uzmobile_logo
             )
         )
-
-        //icon color
-        binding.ivTariflar.imageTintList =
-            (ContextCompat.getColorStateList(requireContext(), R.color.deep_sky_blue_400))
-        binding.ivInternet.imageTintList =
-            (ContextCompat.getColorStateList(requireContext(), R.color.deep_sky_blue_400))
-        binding.ivMassage.imageTintList =
-            (ContextCompat.getColorStateList(requireContext(), R.color.deep_sky_blue_400))
-        binding.ivMinuts.imageTintList =
-            (ContextCompat.getColorStateList(requireContext(), R.color.deep_sky_blue_400))
-        binding.ivUssd.imageTintList =
-            (ContextCompat.getColorStateList(requireContext(), R.color.deep_sky_blue_400))
-        binding.ivServices.imageTintList =
-            (ContextCompat.getColorStateList(requireContext(), R.color.deep_sky_blue_400))
 
         //stroke should be
         binding.cvUzmobile.strokeColor = ContextCompat.getColor(
@@ -199,21 +194,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeVM>() {
                 R.drawable.ic_mobiuz_logo
             )
         )
-
-        //icon color
-        binding.ivTariflar.imageTintList =
-            (ContextCompat.getColorStateList(requireContext(), R.color.alizarin_700))
-        binding.ivInternet.imageTintList =
-            (ContextCompat.getColorStateList(requireContext(), R.color.alizarin_700))
-        binding.ivMassage.imageTintList =
-            (ContextCompat.getColorStateList(requireContext(), R.color.alizarin_700))
-        binding.ivMinuts.imageTintList =
-            (ContextCompat.getColorStateList(requireContext(), R.color.alizarin_700))
-        binding.ivUssd.imageTintList =
-            (ContextCompat.getColorStateList(requireContext(), R.color.alizarin_700))
-        binding.ivServices.imageTintList =
-            (ContextCompat.getColorStateList(requireContext(), R.color.alizarin_700))
-
         //stroke should be
         binding.cvMobiuz.strokeColor = ContextCompat.getColor(
             requireContext(),
@@ -252,7 +232,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeVM>() {
         //call number
         binding.cvBalans.setOnClickListener {
             val intent = Intent(Intent.ACTION_CALL)
-            intent.data = Uri.parse("tel: " +Uri.encode(Constants.CALL_BALANS))
+            intent.data = Uri.parse("tel: " + Uri.encode(Constants.CALL_BALANS))
             if (ContextCompat.checkSelfPermission(
                     requireActivity(),
                     Manifest.permission.CALL_PHONE
@@ -289,21 +269,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeVM>() {
                 R.drawable.ic_ucell_logo
             )
         )
-
-        //icon color
-        binding.ivTariflar.imageTintList =
-            (ContextCompat.getColorStateList(requireContext(), R.color.vivid_violet_800))
-        binding.ivInternet.imageTintList =
-            (ContextCompat.getColorStateList(requireContext(), R.color.vivid_violet_800))
-        binding.ivMassage.imageTintList =
-            (ContextCompat.getColorStateList(requireContext(), R.color.vivid_violet_800))
-        binding.ivMinuts.imageTintList =
-            (ContextCompat.getColorStateList(requireContext(), R.color.vivid_violet_800))
-        binding.ivUssd.imageTintList =
-            (ContextCompat.getColorStateList(requireContext(), R.color.vivid_violet_800))
-        binding.ivServices.imageTintList =
-            (ContextCompat.getColorStateList(requireContext(), R.color.vivid_violet_800))
-
         //stroke should be
         binding.cvUcell.strokeColor = ContextCompat.getColor(
             requireContext(),
@@ -339,7 +304,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeVM>() {
         //call number
         binding.cvBalans.setOnClickListener {
             val intent = Intent(Intent.ACTION_CALL)
-            intent.data = Uri.parse("tel:" +Uri.encode(Constants.CALL_BALANS))
+            intent.data = Uri.parse("tel:" + Uri.encode(Constants.CALL_BALANS))
             if (ContextCompat.checkSelfPermission(
                     requireActivity(),
                     Manifest.permission.CALL_PHONE
@@ -375,21 +340,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeVM>() {
                 R.drawable.ic_beeline_logo
             )
         )
-
-        //icon Color
-        binding.ivTariflar.imageTintList =
-            (ContextCompat.getColorStateList(requireContext(), R.color.gorse_600))
-        binding.ivInternet.imageTintList =
-            (ContextCompat.getColorStateList(requireContext(), R.color.gorse_600))
-        binding.ivMassage.imageTintList =
-            (ContextCompat.getColorStateList(requireContext(), R.color.gorse_600))
-        binding.ivMinuts.imageTintList =
-            (ContextCompat.getColorStateList(requireContext(), R.color.gorse_600))
-        binding.ivUssd.imageTintList =
-            (ContextCompat.getColorStateList(requireContext(), R.color.gorse_600))
-        binding.ivServices.imageTintList =
-            (ContextCompat.getColorStateList(requireContext(), R.color.gorse_600))
-
         //stroke should be
         binding.cvBeeline.strokeColor = ContextCompat.getColor(
             requireContext(),
@@ -426,7 +376,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeVM>() {
         //call number
         binding.cvBalans.setOnClickListener {
             val intent = Intent(Intent.ACTION_CALL)
-            intent.data = Uri.parse("tel:" +Uri.encode(Constants.CALL_BALANS))
+            intent.data = Uri.parse("tel:" + Uri.encode(Constants.CALL_BALANS_BEELINE))
             if (ContextCompat.checkSelfPermission(
                     requireActivity(),
                     Manifest.permission.CALL_PHONE

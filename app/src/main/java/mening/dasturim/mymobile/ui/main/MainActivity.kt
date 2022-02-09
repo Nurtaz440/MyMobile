@@ -1,34 +1,49 @@
 package mening.dasturim.mymobile.ui.main
 
-import android.os.Build
+import android.annotation.SuppressLint
 import android.util.Log
 import android.view.View
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import mening.dasturim.mymobile.R
 import mening.dasturim.mymobile.databinding.ActivityMainBinding
+import mening.dasturim.mymobile.ui.Companies
 import mening.dasturim.mymobile.ui.CompanyState
 import mening.dasturim.mymobile.ui.base.BaseActivity
+import mening.dasturim.mymobile.ui.main.user.home.HomeFragment
 import mening.dasturim.mymobile.utils.ViewUtils
+import mening.dasturim.mymobile.utils.showToast
 
 class MainActivity : BaseActivity<ActivityMainBinding, MainVM>() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var navController: NavController
-    private lateinit var companyState:CompanyState
 
     override fun onBound() {
-        companyState=CompanyState
-        companyState.setCompany(0)
         setUp()
     }
 
+    @SuppressLint("LogConditional")
     fun setUp() {
+        val companie = prefs.company
+        Log.d("Companie observe",prefs.company!!)
+        if (companie != null) {
+            when(companie){
+                Companies.UZMOBILE.name -> CompanyState.setCompany(Companies.UZMOBILE)
+                Companies.MOBIUZ.name -> CompanyState.setCompany(Companies.MOBIUZ)
+                Companies.UCELL.name -> CompanyState.setCompany(Companies.UCELL)
+                Companies.BEELINE.name -> CompanyState.setCompany(Companies.BEELINE)
+            }
+        } else {
+            CompanyState.setCompany(Companies.UZMOBILE)
+            prefs.company=Companies.UZMOBILE.name
+        }
 
         val navHost = supportFragmentManager.findFragmentById(R.id.partial_nav_controller)
         if (navHost != null) {
@@ -76,20 +91,20 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainVM>() {
                 R.id.servicesFragment -> binding.tvInfo.setText(R.string.xizmatlar)
                 R.id.connectFragment -> binding.tvInfoName.setText(R.string.account)
                 R.id.settingsFragment -> binding.tvInfoName.setText(R.string.settings)
+                R.id.profiteFragment -> binding.tvInfo.setText(R.string.profite)
             }
         }
 
         binding.nvBottomBlue.setOnNavigationItemSelectedListener { item ->
-
             when (item.itemId) {
-                R.id.home ->{
+                R.id.home -> {
                     navController.navigate(R.id.homeFragment)
 
                 }
                 R.id.connect -> {
                     navController.navigate(R.id.connectFragment)
                 }
-                R.id.setting ->{
+                R.id.setting -> {
                     navController.navigate(R.id.settingsFragment)
 
                 }
@@ -98,19 +113,19 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainVM>() {
         }
 
 
-        companyState.getCompany().observe(this, Observer {
+        CompanyState.getCompany().observe(this, Observer {
             when (it) {
-                companyState.uzmobile -> {
+                Companies.UZMOBILE -> {
                     companyUzmobile()
 
                 }
-                companyState.mobiuz -> {
+                Companies.MOBIUZ -> {
                     companyMobiuz()
                 }
-                companyState.ucell -> {
+                Companies.UCELL -> {
                     companyUcell()
                 }
-                companyState.beeline->{
+                Companies.BEELINE -> {
                     companyBeeline()
                 }
 
@@ -121,18 +136,24 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainVM>() {
 
     }
 
-    fun companyUzmobile(){
-        binding.nvBottomBlue.itemIconTintList  = ContextCompat.getColorStateList(this, R.color.deep_sky_blue_400)
+    fun companyUzmobile() {
+        binding.nvBottomBlue.itemIconTintList =
+            ContextCompat.getColorStateList(this, R.color.deep_sky_blue_400)
     }
 
-    fun companyMobiuz(){
-        binding.nvBottomBlue.itemIconTintList  = ContextCompat.getColorStateList(this, R.color.alizarin_700)
+    fun companyMobiuz() {
+        binding.nvBottomBlue.itemIconTintList =
+            ContextCompat.getColorStateList(this, R.color.alizarin_700)
     }
-    fun companyUcell(){
-        binding.nvBottomBlue.itemIconTintList  = ContextCompat.getColorStateList(this, R.color.vivid_violet_800)
+
+    fun companyUcell() {
+        binding.nvBottomBlue.itemIconTintList =
+            ContextCompat.getColorStateList(this, R.color.vivid_violet_800)
     }
-    fun companyBeeline(){
-        binding.nvBottomBlue.itemIconTintList  = ContextCompat.getColorStateList(this, R.color.gorse_600)
+
+    fun companyBeeline() {
+        binding.nvBottomBlue.itemIconTintList =
+            ContextCompat.getColorStateList(this, R.color.gorse_600)
     }
 
     override fun getLayoutResId() = R.layout.activity_main
@@ -149,6 +170,5 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainVM>() {
 
     override fun onBackPressed() {
         super.onBackPressed()
-
     }
 }

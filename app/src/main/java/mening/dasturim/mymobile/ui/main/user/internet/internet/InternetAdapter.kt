@@ -11,29 +11,42 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import mening.dasturim.mymobile.R
 import mening.dasturim.mymobile.data.module.DailyItems
-import mening.dasturim.mymobile.databinding.ItemDailyStopBinding
-import mening.dasturim.mymobile.databinding.ItemInternetBinding
-import mening.dasturim.mymobile.ui.main.user.internet.paketlar.DailyAdapter
+import mening.dasturim.mymobile.databinding.ItemTasixBinding
 import mening.dasturim.mymobile.utils.ViewUtils
 
-class InternetAdapter(private val itemClickListener: (Int) -> Unit) :
+class InternetAdapter( val context: Context, private val itemClickListener: (Int) -> Unit) :
     RecyclerView.Adapter<InternetAdapter.VH>() {
     private var arrayList= listOf<DailyItems>()
+    private var colorIcon:Int=R.color.deep_sky_blue_400
+    private var bgColor:Int=R.color.deep_sky_blue_100
+
 
     fun setData(itemList : List<DailyItems>){
         this.arrayList=itemList
         notifyDataSetChanged()
     }
-
+    fun setColor(colorList:Int){
+        this.colorIcon=colorList
+        notifyDataSetChanged()
+    }
+    fun setColorLight(color:Int){
+        this.bgColor=color
+        notifyDataSetChanged()
+    }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
         val inflater= LayoutInflater.from(parent.context)
         val binding =
-            DataBindingUtil.inflate<ItemInternetBinding>(inflater, R.layout.item_internet,parent,false)
+            DataBindingUtil.inflate<ItemTasixBinding>(inflater, R.layout.item_tasix,parent,false)
         return VH(binding,parent.context)
     }
 
     @SuppressLint("NotifyDataSetChanged")
     override fun onBindViewHolder(holder: VH, position: Int) {
+        holder.binding.ivArrowUp.setColorFilter(ContextCompat.getColor(context,colorIcon))
+        holder.binding.ivArrowDown.setColorFilter(ContextCompat.getColor(context,colorIcon))
+        holder.binding.mbActivation.setStrokeColorResource(colorIcon)
+        holder.binding.mcvMain.setCardBackgroundColor(ContextCompat.getColor(context,bgColor))
+
         val isVisibile:Boolean=arrayList[position].expanded
 
         holder.cvExpanded.visibility = if (isVisibile){
@@ -57,7 +70,7 @@ class InternetAdapter(private val itemClickListener: (Int) -> Unit) :
 
     override fun getItemCount()=arrayList.size
 
-    class VH(private val binding: ItemInternetBinding, private val context: Context)
+    class VH( val binding: ItemTasixBinding, private val context: Context)
         : RecyclerView.ViewHolder(binding.root){
 
         var downBtn: ConstraintLayout = binding.clArrowDown
@@ -81,10 +94,9 @@ class InternetAdapter(private val itemClickListener: (Int) -> Unit) :
         fun onBind(rate : DailyItems){
             binding.apply {
                 ivArrowDown.setImageDrawable(ContextCompat.getDrawable(context,rate.image))
-                tvInternetName.setText(rate.name)
-                tvInternetName2.setText(rate.name)
-                tvInternetAbonent.setText(rate.abonent)
-                tvInternetDeadline.setText(rate.internet)
+                tvTasixName.setText(rate.name)
+                tvTasixName2.setText(rate.name)
+                tvTasixDeadline.setText(rate.internet)
 
             }
         }

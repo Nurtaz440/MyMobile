@@ -3,26 +3,25 @@ package mening.dasturim.mymobile.ui.main.user.ussd
 import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import mening.dasturim.mymobile.R
-import mening.dasturim.mymobile.data.module.NonStopItem
 import mening.dasturim.mymobile.data.module.USSDItems
-import mening.dasturim.mymobile.databinding.ItemInternationalBinding
 import mening.dasturim.mymobile.databinding.ItemUssdBinding
-import mening.dasturim.mymobile.ui.main.user.message.around.InternationalAdapter
-import mening.dasturim.mymobile.utils.ViewUtils
 
-class USSDAdapter  (private val itemClickListener: (Int) -> Unit) :
-    RecyclerView.Adapter<USSDAdapter.VH>() {
+class UssdAdapter  (val context: Context, private val itemClickListener: (Int) -> Unit) :
+    RecyclerView.Adapter<UssdAdapter.VH>() {
     private var arrayList= listOf<USSDItems>()
+    private var colorLight:Int=R.color.deep_sky_blue_100
 
     fun setData(itemList : List<USSDItems>){
         this.arrayList=itemList
+        notifyDataSetChanged()
+    }
+    fun setColorLight(bgColorList:Int){
+        this.colorLight=bgColorList
         notifyDataSetChanged()
     }
 
@@ -35,6 +34,7 @@ class USSDAdapter  (private val itemClickListener: (Int) -> Unit) :
 
     @SuppressLint("NotifyDataSetChanged")
     override fun onBindViewHolder(holder: VH, position: Int) {
+        holder.binding.tvUssd.setBackgroundColor(ContextCompat.getColor(context,colorLight))
 
         holder.itemView.setOnClickListener {
             itemClickListener.invoke(position)
@@ -45,7 +45,7 @@ class USSDAdapter  (private val itemClickListener: (Int) -> Unit) :
 
     override fun getItemCount()=arrayList.size
 
-    class VH(private val binding: ItemUssdBinding, private val context: Context)
+    class VH( val binding: ItemUssdBinding, private val context: Context)
         : RecyclerView.ViewHolder(binding.root){
 
         fun onBind(rate : USSDItems){

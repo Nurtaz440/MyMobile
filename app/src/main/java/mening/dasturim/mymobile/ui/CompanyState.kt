@@ -5,20 +5,17 @@ import androidx.lifecycle.MutableLiveData
 import mening.dasturim.mymobile.ui.base.BaseVM
 
 object CompanyState {
-    const val uzmobile=0
-    const val mobiuz=1
-    const val ucell=2
-    const val beeline=3
-    private val company=MutableLiveData<Int>()
+    private val company=MutableLiveData<Companies>()
 
-    fun getCompany():LiveData<Int>{
+    fun getCompany():LiveData<Companies>{
         return company
     }
 
-    fun setCompany(company:Int){
+    fun setCompany(company:Companies){
         this.company.value=company
     }
+}
 
-
-
+enum class  Companies{
+    UZMOBILE,MOBIUZ,UCELL,BEELINE
 }

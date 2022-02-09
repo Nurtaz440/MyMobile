@@ -10,19 +10,26 @@ import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import mening.dasturim.mymobile.R
-import mening.dasturim.mymobile.data.module.DailyItems
 import mening.dasturim.mymobile.data.module.NonStopItem
-import mening.dasturim.mymobile.databinding.ItemInternetBinding
 import mening.dasturim.mymobile.databinding.ItemTasixBinding
-import mening.dasturim.mymobile.ui.main.user.internet.internet.InternetAdapter
 import mening.dasturim.mymobile.utils.ViewUtils
 
-class TasixAdapter (private val itemClickListener: (Int) -> Unit) :
+class TasixAdapter (val context: Context,  private val itemClickListener: (Int) -> Unit) :
     RecyclerView.Adapter<TasixAdapter.VH>() {
     private var arrayList= listOf<NonStopItem>()
+    private var colorIcon:Int=R.color.deep_sky_blue_400
+    private var bgColor:Int=R.color.deep_sky_blue_100
 
     fun setData(itemList : List<NonStopItem>){
         this.arrayList=itemList
+        notifyDataSetChanged()
+    }
+    fun setColor(colorList:Int){
+        this.colorIcon=colorList
+        notifyDataSetChanged()
+    }
+    fun setColorLight(color:Int){
+        this.bgColor=color
         notifyDataSetChanged()
     }
 
@@ -35,6 +42,11 @@ class TasixAdapter (private val itemClickListener: (Int) -> Unit) :
 
     @SuppressLint("NotifyDataSetChanged")
     override fun onBindViewHolder(holder: VH, position: Int) {
+        holder.binding.ivArrowUp.setColorFilter(ContextCompat.getColor(context,colorIcon))
+        holder.binding.ivArrowDown.setColorFilter(ContextCompat.getColor(context,colorIcon))
+        holder.binding.mbActivation.setStrokeColorResource(colorIcon)
+        holder.binding.mcvMain.setCardBackgroundColor(ContextCompat.getColor(context,bgColor))
+
         val isVisibile:Boolean=arrayList[position].expanded
 
         holder.cvExpanded.visibility = if (isVisibile){
@@ -58,7 +70,7 @@ class TasixAdapter (private val itemClickListener: (Int) -> Unit) :
 
     override fun getItemCount()=arrayList.size
 
-    class VH(private val binding: ItemTasixBinding, private val context: Context)
+    class VH (val binding: ItemTasixBinding, private val context: Context)
         : RecyclerView.ViewHolder(binding.root){
 
         var downBtn: ConstraintLayout = binding.clArrowDown
@@ -69,7 +81,6 @@ class TasixAdapter (private val itemClickListener: (Int) -> Unit) :
             downBtn.setOnClickListener {
                 ViewUtils.fadeOut(binding.clArrowDown)
                 ViewUtils.fadeIn(binding.clArrowUp)
-
 
                 binding.clArrowUp.setOnClickListener {
                     ViewUtils.fadeIn(binding.clArrowDown)

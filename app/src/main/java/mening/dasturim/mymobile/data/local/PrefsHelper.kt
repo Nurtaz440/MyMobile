@@ -11,8 +11,8 @@ class PrefsHelper(
     private val preferences: SharedPreferences
 ) {
 
-    var company:Int
-    get() = preferences.getInt(Keys.COMPANIES,CompanyState.uzmobile)
+    var company:String?
+    get() = preferences.getString(Keys.COMPANIES,null)
     set(value)=preferences.put(Keys.COMPANIES,value)
 
     var language: String?

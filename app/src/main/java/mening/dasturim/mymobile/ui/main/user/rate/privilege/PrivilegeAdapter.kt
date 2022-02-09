@@ -11,30 +11,44 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import mening.dasturim.mymobile.R
 import mening.dasturim.mymobile.data.module.RateItem
-import mening.dasturim.mymobile.databinding.ItemPrivilegeBinding
+import mening.dasturim.mymobile.databinding.ItemUnitsBinding
 import mening.dasturim.mymobile.utils.ViewUtils
 
-class PrivilegeAdapter(private val itemClickListener: (Int) -> Unit) :
+class PrivilegeAdapter(val context: Context,private val itemClickListener: (Int) -> Unit) :
     RecyclerView.Adapter<PrivilegeAdapter.VH>() {
     private var arrayList= listOf<RateItem>()
+    private var colorIcon:Int = R.color.deep_sky_blue_400
+    private var bgColor:Int = R.color.deep_sky_blue_100
 
-    @SuppressLint("NotifyDataSetChanged")
     fun setData(itemList : List<RateItem>){
         this.arrayList=itemList
+        notifyDataSetChanged()
+    }
+    fun setColorIcon(colorIconList : Int){
+        this.colorIcon=colorIconList
+        notifyDataSetChanged()
+    }
+    fun setColorLight(colorLight:Int){
+        this.bgColor=colorLight
         notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
         val inflater= LayoutInflater.from(parent.context)
         val binding =
-            DataBindingUtil.inflate<ItemPrivilegeBinding>(inflater, R.layout.item_privilege,parent,false)
+            DataBindingUtil.inflate<ItemUnitsBinding>(inflater, R.layout.item_units,parent,false)
         return VH(binding,parent.context)
     }
 
     @SuppressLint("NotifyDataSetChanged")
     override fun onBindViewHolder(holder: VH, position: Int) {
-        val isVisibile:Boolean=arrayList[position].expanded
 
+        holder.binding.ivArrowUp.setColorFilter(ContextCompat.getColor(context,colorIcon))
+        holder.binding.ivArrowDown.setColorFilter(ContextCompat.getColor(context,colorIcon))
+        holder.binding.mbActivation.setStrokeColorResource(colorIcon)
+        holder.binding.mcvMain.setCardBackgroundColor(ContextCompat.getColor(context,bgColor))
+
+        val isVisibile:Boolean=arrayList[position].expanded
         holder.cvExpanded.visibility = if (isVisibile){
             View.VISIBLE
         }else{
@@ -56,7 +70,7 @@ class PrivilegeAdapter(private val itemClickListener: (Int) -> Unit) :
 
     override fun getItemCount()=arrayList.size
 
-    class VH(private val binding: ItemPrivilegeBinding, private val context: Context)
+    class VH( val binding: ItemUnitsBinding, private val context: Context)
         : RecyclerView.ViewHolder(binding.root){
 
         var downBtn: ConstraintLayout = binding.clArrowDown
@@ -80,13 +94,13 @@ class PrivilegeAdapter(private val itemClickListener: (Int) -> Unit) :
         fun onBind(rate : RateItem){
             binding.apply {
                 ivArrowDown.setImageDrawable(ContextCompat.getDrawable(context,rate.image))
-                tvPrivilegeName.setText(rate.name)
-                tvPrivilegeName2.setText(rate.name)
-                tvPrivilegeAbonent.setText(rate.abonent)
-                tvPrivilegeLimit.setText(rate.limit)
-                tvPrivilegeInternet.setText(rate.internet)
-                tvPrivilegeMessage.setText(rate.message)
-                tvPrivilegeCall.setText(rate.call)
+                tvUnitsName.setText(rate.name)
+                tvUnitsName2.setText(rate.name)
+                tvUnitsAbonent.setText(rate.abonent)
+                tvUnitsLimit.setText(rate.limit)
+                tvUnitsInternet.setText(rate.internet)
+                tvUnitsMesssage.setText(rate.message)
+                tvUnitsCall.setText(rate.call)
 
             }
         }
