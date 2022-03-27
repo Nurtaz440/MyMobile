@@ -30,334 +30,45 @@
     <string name="call_center_number_beeline">0611</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-
-
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="russian">Русский</string>
+    <string name="uzbek">O\‘zbek(Lotin)</string>
+    <string name="english">English</string>
     <string name="xizmatlar">Xizmatlar</string>
     <string name="ussd_kodlar">USSD kodlar</string>
     <string name="sms_paketlar">SMS paketlar</string>
     <string name="internet_paketlar">Internet paketlar</string>
     <string name="tariflar">Tariflar</string>
     <string name="daqiqalar">Daqiqalar</string>
+    <string name="number">Raqam</string>
+    <string name="payment2">YHQ mavjud emas</string>
 
     <string name="account">Bog\'lanish</string>
     <string name="settings">Xizmatlar</string>
     <string name="profite">Foydali almashinuv</string>
 
-    <!--text of rate -->
-    <string name="units">UNITS</string>
-    <string name="milliy">Milliy</string>
-    <string name="imtiyozlar">Imtiyozlar</string>
-    <string name="m2m">M2M</string>
-
-    <!--text of UNITS -->
-    <string name="units1">UNITS 700</string>
-    <string name="units2">UNITS 1500</string>
-    <string name="units3">UNITS 4000</string>
-    <string name="units4">UNITS 8000</string>
-    <string name="units5">UNITS 11000</string>
-    <string name="units6">UNITS 14000</string>
-    <string name="units7">UNITS 18000</string>
-    <string name="units8">UNITS 22000</string>
-    <string name="units9">UNITS 30000</string>
-    <string name="units10">UNITS 40000</string>
-    <string name="units11">UNITS 55000</string>
-    <string name="units12">UNITS 90000</string>
-
-
     <!-- text of abanent tolovi-->
-    <string name="abonent">Abonent to\'lovi (7 kunga)</string>
-    <string name="limit">Kiritilgan limit</string>
-    <string name="mobile">Moblie Internet (1 MB)</string>
-    <string name="qongroq">Qong\'roq (1 daqiqa)</string>
-    <string name="sms">SMS (1 dona)</string>
-    <string name="activiation">Faollashtirish</string>
-
-    <!-- tolov-->
-    <string name="tolov">700 so\'m</string>
-    <string name="tolov2">1 500 so\'m</string>
-    <string name="tolov3">4 000 so\'m</string>
-    <string name="tolov4">8 000 so\'m</string>
-    <string name="tolov5">11 000 so\'m</string>
-    <string name="tolov6">14 000 so\'m</string>
-    <string name="tolov7">18 000 so\'m</string>
-    <string name="tolov8">22 000 so\'m</string>
-    <string name="tolov9">30 000 so\'m</string>
-    <string name="tolov10">40 000 so\'m</string>
-    <string name="tolov11">55 000 so\'m</string>
-    <string name="tolov12">90 000 so\'m</string>
-
-
-    <!-- units-->
-    <string name="unit">700 UNITS</string>
-    <string name="unit2">1500 UNITS</string>
-    <string name="unit3">4000 UNITS</string>
-    <string name="unit4">8000 UNITS</string>
-    <string name="unit5">11000 UNITS</string>
-    <string name="unit6">14000 UNITS</string>
-    <string name="unit7">18000 UNITS</string>
-    <string name="unit8">22000 UNITS</string>
-    <string name="unit9">30000 UNITS</string>
-    <string name="unit10">40000 UNITS</string>
-    <string name="unit11">55000 UNITS</string>
-    <string name="unit12">90000 UNITS</string>
-
-    <string name="mobile_unit">1 UNIT</string>
-
-
-    <!-- tolov milliy -->
-    <string name="tolov_milliy">10000 so\'m</string>
-    <string name="tolov_milliy2">15000 so\'m</string>
-    <string name="tolov_milliy3">40000 so\'m</string>
-    <string name="tolov_milliy4">50000 so\'m</string>
-    <string name="tolov_milliy5">70000 so\'m</string>
-    <string name="tolov_milliy6">100000 so\'m</string>
-    <string name="tolov_milliy7">149000 so\'m</string>
-
-    <!-- milliy nomi-->
-    <string name="milliy1">Milliy 10</string>
-    <string name="milliy2">Milliy 15</string>
-    <string name="milliy3">Milliy 40</string>
-    <string name="milliy4">Milliy 50</string>
-    <string name="milliy5">Milliy 70</string>
-    <string name="milliy6">Milliy 100</string>
-    <string name="milliy7">VIP</string>
-
-
-    <string name="nation_minuts">10 daqiqa</string>
-    <string name="nation_mg">10 MB</string>
-    <string name="nation_sms">10 SMS</string>
-
-
-    <!-- imtiyozlar nomi-->
-    <string name="talim">Ta\'lim</string>
-    <string name="maktab">Maktab</string>
-    <string name="bolajon">Bolajon</string>
-    <string name="yoshlar">Yoshlar</string>
-
-    <!-- imtiyozlar tolov-->
-    <string name="talim_tolov">34 900 so\'m</string>
-    <string name="maktab_tollov">25 000 so\'m</string>
-    <string name="bolajon_tolov">12 500 so\'m</string>
-    <string name="yoshlar_tolov">28 000 so\'m</string>
-
-    <!-- imtiyozlar kiritilgan limit-->
-    <string name="imt_limit">300 daqiqa</string>
-    <string name="imt_limit2">200 daqiqa</string>
-    <string name="imt_limit3">100 daqiqa</string>
-    <string name="imt_limit4">800 daqiqa</string>
-
-    <!-- imtiyozlar minuts-->
-    <string name="imt_mituts">1000 daqiqa</string>
-    <string name="imt_mituts2">800 daqiqa</string>
-    <string name="imt_mituts3">500 daqiqa</string>
-    <string name="imt_mituts4">3000 daqiqa</string>
-
-    <!-- imtiyozlar mb-->
-    <string name="imt_mg">8000 MB</string>
-    <string name="imt_mg2">8000 MB</string>
-    <string name="imt_mg3">8000 MB</string>
-    <string name="imt_mg4">8000 MB</string>
-
-    <!-- imtiyozlar sms-->
-    <string name="imt_sms">500 SMS</string>
-    <string name="imt_sms2">800 SMS</string>
-    <string name="imt_sms3">200 SMS</string>
-    <string name="imt_sms4">800 SMS</string>
-
-
-    <!-- M2M names-->
-    <string name="uzmobile_m2m">Uzmobile M2M</string>
-    <string name="m2m_basic">M2M Basic</string>
-    <string name="uzcard_gsm">UZCARD GSM</string>
-    <string name="humo">HUMO GSM</string>
-    <string name="m2m_uzmobile">Uzmobile M2M yil</string>
-
-    <!-- M2M tolovlar-->
-    <string name="m2m_tolov">6 310 so\'m</string>
-    <string name="m2m_tolov2">12 510 so\'m</string>
-    <string name="m2m_tolov3">16 850 so\'m</string>
-    <string name="m2m_tolov4">24 650 so\'m</string>
-    <string name="m2m_tolov5">31 700 so\'m</string>
-
-    <!-- M2M limit-->
-    <string name="m2m_limit">150 daqiqa</string>
-    <string name="m2m_limit2">450 daqiqa</string>
-    <string name="m2m_limit3">600 daqiqa</string>
-    <string name="m2m_limit4">1000 daqiqa</string>
-    <string name="m2m_limit5">1200 daqiqa</string>
-
-    <!-- M2M minuts-->
-    <string name="m2m_minuts">250 daqiqa</string>
-    <string name="m2m_minuts2">650 daqiqa</string>
-    <string name="m2m_minuts3">1000 daqiqa</string>
-    <string name="m2m_minuts4">2000 daqiqa</string>
-    <string name="m2m_minuts5">3250 daqiqa</string>
-
-    <!-- M2M MB-->
-    <string name="m2m_mb">8000 MB</string>
-    <string name="m2m_mb2">9000 MB</string>
-    <string name="m2m_mb3">10000 MB</string>
-    <string name="m2m_mb4">12000 MB</string>
-    <string name="m2m_mb5">16000 MB</string>
-
-    <!-- M2M SMS-->
-    <string name="m2m_sms">500 SMS</string>
-    <string name="m2m_sms2">600 SMS</string>
-    <string name="m2m_sms3">800 SMS</string>
-    <string name="m2m_sms4">1000 SMS</string>
-    <string name="m2m_sms5">1000 SMS</string>
-
-    <!-- Non stop-->
-    <string name="non_stop">100 MB non stop</string>
-    <string name="non_stop2">300 MB non stop</string>
-    <string name="non_stop3">600 MB non stop</string>
-
-    <!-- non stop tolov-->
-    <string name="non_stop_tolov">1 499 so\'m</string>
-    <string name="non_stop_tolov2">4 500 so\'m</string>
-    <string name="non_stop_tolov3">8 200 so\'m</string>
-
-    <!-- non stop trafik hajmi-->
-    <string name="non_stop_mb">100 MB</string>
-    <string name="non_stop_mb2">300 MB</string>
-    <string name="non_stop_mb3">600 MB</string>
-
-    <!-- text of non stop-->
-    <string name="abonent_tolovi">Abonent to\'lovi (kunlik)</string>
-    <string name="ulanish">Ulanish narxi (1 martalik)</string>
-    <string name="trafik">Trafik hajmi</string>
-
-    <!-- daily pockets name-->
-    <string name="daily_name">D100MB</string>
-    <string name="daily_name2">D300MB</string>
-    <string name="daily_name3">D600MB</string>
-
-    <!-- daily pockets payment-->
-    <string name="daily_pay1">3000 so\'m</string>
-    <string name="daily_pay2">6000 so\'m</string>
-    <string name="daily_pay3">10000 so\'m</string>
-
-
-    <!-- daily pockets mb-->
-    <string name="daily_limit">100 MB</string>
-    <string name="daily_limit2">300 MB</string>
-    <string name="daily_limit3">600 MB</string>
-
-    <!-- internet pockets name-->
-    <string name="internet">1 GB</string>
-    <string name="internet1">1.5 GB</string>
-    <string name="internet2">3 GB</string>
-    <string name="internet3">5 GB</string>
-    <string name="internet4">8 GB</string>
-    <string name="internet5">12 GB</string>
-    <string name="internet6">16 GB</string>
-    <string name="internet7">20 GB</string>
-    <string name="internet8">30 GB</string>
-    <string name="internet9">50 GB</string>
-    <string name="internet10">75 GB</string>
-
-    <!--internets payment-->
-    <string name="internet_payment">9000 so\'m</string>
-    <string name="internet_payment1">12 000 so\'m</string>
-    <string name="internet_payment2">16 000 so\'m</string>
-    <string name="internet_payment3">20 000 so\'m</string>
-    <string name="internet_payment4">26 000 so\'m</string>
-    <string name="internet_payment5">32 000 so\'m</string>
-    <string name="internet_payment6">35 000 so\'m</string>
-    <string name="internet_payment7">44 000 so\'m</string>
-    <string name="internet_payment8">50 000 so\'m</string>
-    <string name="internet_payment9">70 000 so\'m</string>
-    <string name="internet_payment10">120 000 so\'m</string>
-
-    <!-- internet deadLine-->
-    <string name="deadline">Muddati</string>
-    <string name="deadline_day">30 kun</string>
-
-    <!-- Tasix name-->
-    <string name="tasix_name">TAS-IX 2 048</string>
-    <string name="tasix_name2">TAS-IX 10 240</string>
-    <string name="tasix_name3">TAS-IX 15 360</string>
-
-    <!-- tasix payment-->
-    <string name="tasix_payment">15 000 so\'m</string>
-    <string name="tasix_payment2">32 000 so\'m</string>
-    <string name="tasix_payment3">45 000 so\'m</string>
-
-    <!-- tasix mb-->
-    <string name="tasix_mb">2 048 MB</string>
-    <string name="tasix_mb2">10 240 MB</string>
-    <string name="tasix_mb3">15 360 MB</string>
-
-    <!-- tasix deadline-->
-    <string name="tasix_day">90 kun</string>
-
-
-    <!-- internet non stop pockets name-->
-    <string name="internet_non_stop2">3 GB</string>
-    <string name="internet_non_stop3">5 GB</string>
-    <string name="internet_non_stop4">8 GB</string>
-    <string name="internet_non_stop5">12 GB</string>
-    <string name="internet_non_stop6">16 GB</string>
-    <string name="internet_non_stop7">20 GB</string>
-    <string name="internet_non_stop8">30 GB</string>
-    <string name="internet_non_stop9">50 GB</string>
-    <string name="internet_non_stop10">75 GB</string>
-
-    <!-- Internet non stop payment-->
-    <string name="internet_non_stop_payment2">18 000 so\'m</string>
-    <string name="internet_non_stop_payment3">24 000 so\'m</string>
-    <string name="internet_non_stop_payment4">25 000 so\'m</string>
-    <string name="internet_non_stop_payment5">39 000 so\'m</string>
-    <string name="internet_non_stop_payment6">42 000 so\'m</string>
-    <string name="internet_non_stop_payment7">48 000 so\'m</string>
-    <string name="internet_non_stop_payment8">56 000 so\'m</string>
-    <string name="internet_non_stop_payment9">70 000 so\'m</string>
-    <string name="internet_non_stop_payment10">11 0000 so\'m</string>
-
-    <!-- Internet non stop payment after month-->
-    <string name="internet_non_stop_pay_month2">16 200 so\'m</string>
-    <string name="internet_non_stop_pay_month3">22 000 so\'m</string>
-    <string name="internet_non_stop_pay_month4">23 620 so\'m</string>
-    <string name="internet_non_stop_pay_month5">35 400 so\'m</string>
-    <string name="internet_non_stop_pay_month6">42 800 so\'m</string>
-    <string name="internet_non_stop_pay_month7">45 000 so\'m</string>
-    <string name="internet_non_stop_pay_month8">50 000 so\'m</string>
-    <string name="internet_non_stop_pay_month9">75 860 so\'m</string>
-    <string name="internet_non_stop_pay_month10">105 000 so\'m</string>
-
-    <string name="abonent_tasix">Abonent to\'lovi</string>
-    <string name="abonent_2oy">2-oydan narxi</string>
-    <string name="abonent_inter_non">Abonent to\'lovi (30 kunlik)</string>
-    <!-- text minutes-->
-    <string name="minutes_name">MS 100 Min</string>
-
-
-    <!--ussd -->
-    <string name="ussd">*100*2#</string>
-    <string name="ussd2">*107#</string>
-    <string name="ussd3">*100#</string>
-    <string name="ussd4">*100*5#</string>
-    <string name="ussd5">*111*2*7*1#</string>
-    <string name="ussd6">*111*2*7*2#</string>
-    <string name="ussd7">*100*4#</string>
-    <string name="ussd8">*199#</string>
-
-    <string name="ussd_describe">Minut, MB va SMS
-  qoldig\‘i haqida ma\’lumot</string>
-    <string name="ussd_describe2">Limit qoldig\‘i va
-balans tekshirish</string>
-    <string name="ussd_describe3">Hisobni boshqarish</string>
-    <string name="ussd_describe4">Abonent nomidagi
-raqamlar ro\‘yxati</string>
-    <string name="ussd_describe5">LTE (4G) hizmatini
-yoqish</string>
-    <string name="ussd_describe6">LTE (4G) hizmatini
-o\‘chirish</string>
-    <string name="ussd_describe7">O\‘z telefon raqamini
-bilish</string>
-    <string name="ussd_describe8">Axborot-ko\‘ngilochar
-hizmatlarini o\‘chirish</string>
+    <string name="abonent">Abonent to\'lovi </string>
+    <string name="take">Yechib olish </string>
+    <string name="expire">/oyiga </string>
+    <string name="details">Batafsil</string>
+    <string name="mobile">Moblie Internet</string>
+    <string name="qongroq">Qong\'iroq</string>
+    <string name="qongroq_chiqish">Chiqish qo\'ng\'iroqlar</string>
+    <string name="sms">SMS</string>
+    <string name="sms_out">SMS(1 SMS)</string>
+    <string name="internet_out">Internet(1 MB)</string>
+    <string name="cashback">Cashback</string>
+    <string name="max_internet">Max Internet</string>
+    <string name="activation">Faollashtirish</string>
+    <string name="free_sms">Bepul SMS</string>
+    <string name="score">Ball</string>
+    <string name="speed">Tezligi</string>
+    <string name="payment_question">So\'rov</string>
+    <string name="sputnik">Sputnik aloqasi</string>
+    <string name="messanger">Messanjerlarga</string>
+    <string name="call_in">Kiruvchi qo\'ng\'iroq</string>
+    <string name="call_out">Chiquvchi qo\'ng\'roq</string>
+    <string name="call_uzb">O\'zb chiquvchi qo\'ng\'iroq</string>
 
     <!-- sozlamalar-->
     <string name="language">Til o\'zgartirish</string>
@@ -375,19 +86,27 @@ hizmatlarini o\‘chirish</string>
     <string name="restart">Restart</string>
     <string name="ziyonet">ZiyoNet</string>
     <string name="oyla_uchun">“Oila uchun” xizmati</string>
-    <string name="jarimalar_haqida">YHQ jarimalar haqida xabar xizmati</string>
-    <string name="gsm_abonent">GSM Abonent bo‘limi xizmatlari</string>
     <string name="tezkor_otkazmalar">Tezkor o\‘tqazmalar</string>
-    <string name="qabul_qilinmagan">“Qabul qilinmagan qo\‘ng\‘iroq” va ”Tarmoqda”</string>
-    <string name="sevimli_raqam">Sevimli raqamlar</string>
-    <string name="raqam_ijarasi">Raqam ijarasi</string>
-    <string name="axborat_xizmatlari">Axborot-ko\‘ngilochar xizmatlari</string>
-    <string name="mediabay">“Mediabay” dan online-kinoteatr</string>
-    <string name="yaqinlar">Yaqinlaringizga paket xarid qiling</string>
-    <string name="menga_qongiroq_qil">Menga qo\‘ng\‘iroq qiling</string>
-    <string name="muzzone">MuzZone</string>
-    <string name="esim">eSIM</string>
 
     <string name="leave">Chiqish uchun ikki marta bosing</string>
+    <!-- service mobiuz-->
+    <string name="ballar">Ballar</string>
+    <string name="vada_qilingan">Vada qilingan tolov</string>
+    <string name="xr_ulanish">XR ulanish</string>
+    <!-- service ucell-->
+    <string name="u">Medabay</string>
+    <string name="sms_imzo">SMS Imzo</string>
+    <string name="meni_xizmatim">Mening Xizmatim</string>
+    <string name="maxfiy_qongiroq">Maxfiy qo\'ng\'iroq</string>
+    <string name="jismoniy">Jismoniy shaxsalar uchun sug\'urta</string>
+    <string name="dtm">Davlat test markazi</string>
+    <string name="iTV">iTV</string>
+
+    <!-- service beeline-->
+    <string name="beep">Beep Call</string>
+    <string name="xizmat">Mening xizmatlarim</string>
+    <string name="find">Raqamni aniqlash</string>
+    <string name="my_number">O\'zimni raqamlarim</string>
+
 
 </resources>

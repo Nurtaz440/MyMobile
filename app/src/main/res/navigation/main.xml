@@ -21,13 +21,8 @@
         android:label="fragment_message"
         tools:layout="@layout/fragment_message" />
     <fragment
-        android:id="@+id/minutesFragment"
-        android:name="mening.dasturim.mymobile.ui.main.user.minuts.MinutesFragment"
-        android:label="fragment_minuts"
-        tools:layout="@layout/fragment_minuts" />
-    <fragment
         android:id="@+id/rateFragment"
-        android:name="mening.dasturim.mymobile.ui.main.user.rate.RateFragment"
+        android:name="mening.dasturim.mymobile.ui.main.user.tariff.TariffFragment"
         android:label="fragment_rate"
         tools:layout="@layout/fragment_rate" />
     <fragment
@@ -54,4 +49,36 @@
         android:name="mening.dasturim.mymobile.ui.main.user.services.profite.ProfiteFragment"
         android:label="fragment_profite"
         tools:layout="@layout/fragment_profite" />
+    <fragment
+        android:id="@+id/minutsPocket"
+        android:name="mening.dasturim.mymobile.ui.main.user.minuts.MinutsPocket"
+        android:label="MinutsPocket" />
+    <fragment
+        android:id="@+id/limitFragment2"
+        android:name="mening.dasturim.mymobile.ui.main.user.services.limit.LimitFragment"
+        android:label="LimitFragment2" />
+    <fragment
+        android:id="@+id/callFragment"
+        android:name="mening.dasturim.mymobile.ui.main.user.services.call.CallFragment"
+        android:label="CallFragment" />
+    <fragment
+        android:id="@+id/ziyonetFragment"
+        android:name="mening.dasturim.mymobile.ui.main.user.services.family.ZiyonetFragment"
+        android:label="ZiyonetFragment" />
+    <fragment
+        android:id="@+id/mobileFragment"
+        android:name="mening.dasturim.mymobile.ui.main.user.services.mobile.MobileFragment"
+        android:label="MobileFragment" />
+    <fragment
+        android:id="@+id/testFragment"
+        android:name="mening.dasturim.mymobile.ui.main.user.services.test.TestFragment"
+        android:label="TestFragment" />
+    <fragment
+        android:id="@+id/tvFragment"
+        android:name="mening.dasturim.mymobile.ui.main.user.services.tv.TvFragment"
+        android:label="TvFragment" />
+    <fragment
+        android:id="@+id/languageFragment"
+        android:name="mening.dasturim.mymobile.ui.main.user.settings.language.LanguageFragment"
+        android:label="LanguageFragment" />
 </navigation>

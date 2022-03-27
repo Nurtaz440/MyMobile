@@ -1,14 +1,13 @@
 package mening.dasturim.mymobile.ui.main
 
 import android.annotation.SuppressLint
+import android.content.pm.ActivityInfo
 import android.util.Log
 import android.view.View
 import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.navigation.NavController
-import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
@@ -17,9 +16,7 @@ import mening.dasturim.mymobile.databinding.ActivityMainBinding
 import mening.dasturim.mymobile.ui.Companies
 import mening.dasturim.mymobile.ui.CompanyState
 import mening.dasturim.mymobile.ui.base.BaseActivity
-import mening.dasturim.mymobile.ui.main.user.home.HomeFragment
 import mening.dasturim.mymobile.utils.ViewUtils
-import mening.dasturim.mymobile.utils.showToast
 
 class MainActivity : BaseActivity<ActivityMainBinding, MainVM>() {
     private lateinit var appBarConfiguration: AppBarConfiguration
@@ -32,7 +29,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainVM>() {
     @SuppressLint("LogConditional")
     fun setUp() {
         val companie = prefs.company
-        Log.d("Companie observe",prefs.company!!)
+    //    Log.d("Companie observe",prefs.company!!)
         if (companie != null) {
             when(companie){
                 Companies.UZMOBILE.name -> CompanyState.setCompany(Companies.UZMOBILE)
@@ -45,12 +42,12 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainVM>() {
             prefs.company=Companies.UZMOBILE.name
         }
 
+       //setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
+
         val navHost = supportFragmentManager.findFragmentById(R.id.partial_nav_controller)
         if (navHost != null) {
             navController = navHost.findNavController()
         }
-
-
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
 
@@ -85,7 +82,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainVM>() {
             when (destination.id) {
                 R.id.rateFragment -> binding.tvInfo.setText(R.string.tariflar)
                 R.id.internetPocketsFragment -> binding.tvInfo.setText(R.string.internet_paketlar)
-                R.id.minutesFragment -> binding.tvInfo.setText(R.string.daqiqalar)
+                R.id.minutsPocket -> binding.tvInfo.setText(R.string.daqiqalar)
                 R.id.messageFragment -> binding.tvInfo.setText(R.string.sms_paketlar)
                 R.id.USSDFragment -> binding.tvInfo.setText(R.string.ussd_kodlar)
                 R.id.servicesFragment -> binding.tvInfo.setText(R.string.xizmatlar)

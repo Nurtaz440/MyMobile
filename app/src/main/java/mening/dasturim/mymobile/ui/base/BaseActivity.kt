@@ -149,8 +149,6 @@ abstract class BaseActivity<T : ViewDataBinding, V : BaseVM> :
     }
 
     override fun onRefreshTokenFail() {
-
-
     }
 
     override fun handleError(it: Throwable) {
@@ -199,6 +197,7 @@ abstract class BaseActivity<T : ViewDataBinding, V : BaseVM> :
         val dm = resources.displayMetrics
         val conf = resources.configuration
         val locale = Locale(language)
+        conf.setLocale(locale)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             applicationContext.createConfigurationContext(conf) //for Android 7+
         } else {

@@ -4,19 +4,22 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import mening.dasturim.mymobile.R
-import mening.dasturim.mymobile.data.module.USSDItems
+import mening.dasturim.mymobile.data.module.UssdItems
 import mening.dasturim.mymobile.databinding.ItemUssdBinding
 
 class UssdAdapter  (val context: Context, private val itemClickListener: (Int) -> Unit) :
     RecyclerView.Adapter<UssdAdapter.VH>() {
-    private var arrayList= listOf<USSDItems>()
+    private var arrayList= listOf<UssdItems>()
     private var colorLight:Int=R.color.deep_sky_blue_100
 
-    fun setData(itemList : List<USSDItems>){
+    fun setData(itemList : List<UssdItems>){
         this.arrayList=itemList
         notifyDataSetChanged()
     }
@@ -48,10 +51,10 @@ class UssdAdapter  (val context: Context, private val itemClickListener: (Int) -
     class VH( val binding: ItemUssdBinding, private val context: Context)
         : RecyclerView.ViewHolder(binding.root){
 
-        fun onBind(rate : USSDItems){
+        fun onBind(rate : UssdItems){
             binding.apply {
                 tvUssd.setText(rate.name)
-                tvUssdDescribe.setText(rate.abonent)
+                tvUssdDescribe.setText(rate.details)
 
             }
         }

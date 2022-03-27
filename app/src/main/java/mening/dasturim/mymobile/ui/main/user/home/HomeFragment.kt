@@ -20,43 +20,30 @@ import mening.dasturim.mymobile.ui.CompanyState
 import mening.dasturim.mymobile.ui.base.BaseFragment
 
 class HomeFragment : BaseFragment<FragmentHomeBinding, HomeVM>() {
-    private lateinit var navController: NavController
     private lateinit var homeAdapter: HomeAdapter
     override fun onBound() {
         setUp()
-
     }
 
     fun setUp() {
-
-        val navHost = fragmentManager?.findFragmentById(R.id.partial_nav_controller)
-        if (navHost != null) {
-            navController = navHost.findNavController()
-        }
-
         CompanyState.getCompany().observe(this, Observer {
             Log.d("Observe", it.toString())
             when (it) {
                 Companies.UZMOBILE -> {
                     homeAdapter.setColor(R.color.deep_sky_blue_400)
                     companyUzmobile()
-
                 }
                 Companies.MOBIUZ -> {
                     homeAdapter.setColor(R.color.alizarin_700)
                     companyMobiuz()
-
                 }
                 Companies.UCELL -> {
                     homeAdapter.setColor(R.color.vivid_violet_800)
                     companyUcell()
-
-
                 }
                 Companies.BEELINE -> {
                     homeAdapter.setColor(R.color.gorse_600)
                     companyBeeline()
-
                 }
             }
         })
@@ -64,7 +51,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeVM>() {
             when (it) {
                 0 -> findNavController().navigate(R.id.rateFragment)
                 1 -> findNavController().navigate(R.id.internetPocketsFragment)
-                2 -> findNavController().navigate(R.id.minutesFragment)
+                2 -> findNavController().navigate(R.id.minutsPocket)
                 3 -> findNavController().navigate(R.id.messageFragment)
                 4 -> findNavController().navigate(R.id.USSDFragment)
                 5 -> findNavController().navigate(R.id.servicesFragment)
@@ -129,7 +116,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeVM>() {
         binding.cvMobiuz.strokeWidth = 0
         binding.cvUcell.strokeWidth = 0
         binding.cvBeeline.strokeWidth = 0
-
+        binding.cvCall.setRippleColorResource(R.color.deep_sky_blue_100)
+        binding.cvBalans.setRippleColorResource(R.color.deep_sky_blue_100)
 
         //call number
         binding.cvCall.setOnClickListener {
@@ -203,7 +191,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeVM>() {
         binding.cvMobiuz.strokeWidth = 2
         binding.cvUcell.strokeWidth = 0
         binding.cvBeeline.strokeWidth = 0
-
+        binding.cvCall.setRippleColorResource(R.color.alizarin_100)
+        binding.cvBalans.setRippleColorResource(R.color.alizarin_100)
 
         //text should be
         binding.tvMain.setText(R.string.mobiuz)
@@ -263,12 +252,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeVM>() {
             (ContextCompat.getColorStateList(requireContext(), R.color.vivid_violet_800))
         binding.ivBallans.imageTintList =
             (ContextCompat.getColorStateList(requireContext(), R.color.vivid_violet_800))
-        binding.cvLogoLarge.setImageDrawable(
-            ContextCompat.getDrawable(
-                requireContext(),
-                R.drawable.ic_ucell_logo
-            )
-        )
+        binding.cvLogoLarge.setImageDrawable(ContextCompat.getDrawable(requireContext(),R.drawable.ic_ucell_logo))
         //stroke should be
         binding.cvUcell.strokeColor = ContextCompat.getColor(
             requireContext(),
@@ -279,6 +263,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeVM>() {
         binding.cvMobiuz.strokeWidth = 0
         binding.cvUcell.strokeWidth = 2
         binding.cvBeeline.strokeWidth = 0
+        binding.cvCall.setRippleColorResource(R.color.vivid_violet_100)
+        binding.cvBalans.setRippleColorResource(R.color.vivid_violet_100)
+
         //text should be
         binding.tvMain.setText(R.string.ucell)
         binding.tvNumber.setText(R.string.call_center_number_ucell)
@@ -349,7 +336,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeVM>() {
         binding.cvMobiuz.strokeWidth = 0
         binding.cvUcell.strokeWidth = 0
         binding.cvBeeline.strokeWidth = 2
-
+        binding.cvCall.setRippleColorResource(R.color.gorse_100)
+        binding.cvBalans.setRippleColorResource(R.color.gorse_100)
         //text should be
         binding.tvMain.setText(R.string.beeline)
         binding.tvNumber.setText(R.string.call_center_number_beeline)

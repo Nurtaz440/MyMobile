@@ -11,7 +11,7 @@
             android:background="@drawable/tab_selected"
             android:gravity="center"
             android:padding="5dp"
-            android:text="UNITS"
+            android:text=""
             android:textColor="@color/black"
             android:textSize="19sp"
             app:elevation="10dp"

@@ -1,40 +1,141 @@
 package mening.dasturim.mymobile.ui.main.user.services.profite
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+
+import android.util.Log
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.android.gms.tasks.Task
 import com.google.android.material.tabs.TabLayout
+import com.google.firebase.firestore.DocumentSnapshot
+import com.google.firebase.firestore.FirebaseFirestore
 import mening.dasturim.mymobile.R
-import mening.dasturim.mymobile.databinding.FragmentProfiteBinding
+import mening.dasturim.mymobile.databinding.FragmentInternetPocketsBinding
 import mening.dasturim.mymobile.ui.Companies
 import mening.dasturim.mymobile.ui.CompanyState
 import mening.dasturim.mymobile.ui.base.BaseFragment
+import mening.dasturim.mymobile.utils.ViewUtils
 
-class ProfiteFragment : BaseFragment<FragmentProfiteBinding,ProfiteVM>() {
-
+class ProfiteFragment : BaseFragment<FragmentInternetPocketsBinding,ProfiteVM>() {
     lateinit var profiteAdapter: ProfiteAdapter
+    private lateinit var firebaseFirestore: FirebaseFirestore
     override fun onBound() {
-
         setUp()
     }
     fun setUp(){
+        ViewUtils.fadeIn(binding.progressBar)
+        profiteAdapter= ProfiteAdapter(requireFragmentManager(),requireActivity().lifecycle)
+        firebaseFirestore = FirebaseFirestore.getInstance()
 
-        binding.tabLayout.apply {
-            addTab(binding.tabLayout.newTab().setText("Daqiqalar MBga"))
-            addTab(binding.tabLayout.newTab().setText("MB O'zbekistan bo'ylab"))
-        }
         CompanyState.getCompany().observe(this, Observer {
             if (it != null){
                 when(it){
-                    Companies.UZMOBILE -> binding.tabLayout.setSelectedTabIndicatorColor(resources.getColor(R.color.deep_sky_blue_400))
-                    Companies.MOBIUZ -> binding.tabLayout.setSelectedTabIndicatorColor(resources.getColor(R.color.alizarin_700))
-                    Companies.UCELL -> binding.tabLayout.setSelectedTabIndicatorColor(resources.getColor(R.color.vivid_violet_800))
-                    Companies.BEELINE -> binding.tabLayout.setSelectedTabIndicatorColor(resources.getColor(R.color.gorse_600))
+                    Companies.UZMOBILE -> {
+                        binding.tabLayout.setSelectedTabIndicatorColor(resources.getColor(R.color.deep_sky_blue_400))
+                        firebaseFirestore.collection("UzMobile").document("Xizmatlar").get()
+                            .addOnCompleteListener(object : OnCompleteListener<DocumentSnapshot?> {
+                                override fun onComplete(p0: Task<DocumentSnapshot?>) {
+                                    if (p0.isSuccessful) {
+                                        Log.d("Route Fragment", "onComplete: query " + p0)
+                                        ViewUtils.fadeOut(binding.progressBar)
+
+                                        p0.result?.let {
+
+                                            val list: List<String> =
+                                                it.get("collections") as ArrayList<String>
+                                            profiteAdapter.setData(list)
+
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[0]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[1]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[2]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[3]))
+
+                                        }
+                                    }
+                                }
+
+                            })
+                    }
+                    Companies.MOBIUZ -> {
+                        binding.tabLayout.setSelectedTabIndicatorColor(resources.getColor(R.color.alizarin_700))
+                        firebaseFirestore.collection("MobiUz").document("Xizmatlar").get()
+                            .addOnCompleteListener(object : OnCompleteListener<DocumentSnapshot?> {
+                                override fun onComplete(p0: Task<DocumentSnapshot?>) {
+                                    if (p0.isSuccessful) {
+                                        Log.d("Route Fragment", "onComplete: query " + p0)
+                                        ViewUtils.fadeOut(binding.progressBar)
+
+                                        p0.result?.let {
+
+                                            val list: List<String> =
+                                                it.get("collections") as ArrayList<String>
+                                            profiteAdapter.setData(list)
+
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[0]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[1]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[2]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[3]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[4]))
+
+                                        }
+                                    }
+                                }
+
+                            })
+                    }
+                    Companies.UCELL -> {
+                        binding.tabLayout.setSelectedTabIndicatorColor(resources.getColor(R.color.vivid_violet_800))
+                        firebaseFirestore.collection("Ucell").document("Xizmatlar").get()
+                            .addOnCompleteListener(object : OnCompleteListener<DocumentSnapshot?> {
+                                override fun onComplete(p0: Task<DocumentSnapshot?>) {
+                                    if (p0.isSuccessful) {
+                                        Log.d("Route Fragment", "onComplete: query " + p0)
+                                        ViewUtils.fadeOut(binding.progressBar)
+
+                                        p0.result?.let {
+                                            val list: List<String> =
+                                                it.get("collections") as ArrayList<String>
+                                            profiteAdapter.setData(list)
+
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[0]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[1]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[2]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[4]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[3]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[5]))
+
+                                        }
+                                    }
+                                }
+
+                            })
+                    }
+                    Companies.BEELINE -> {
+                        binding.tabLayout.setSelectedTabIndicatorColor(resources.getColor(R.color.gorse_600))
+                        firebaseFirestore.collection("Beeline").document("Xizmatlar").get()
+                            .addOnCompleteListener(object : OnCompleteListener<DocumentSnapshot?> {
+                                override fun onComplete(p0: Task<DocumentSnapshot?>) {
+                                    if (p0.isSuccessful) {
+                                        Log.d("Route Fragment", "onComplete: query " + p0)
+                                        ViewUtils.fadeOut(binding.progressBar)
+
+                                        p0.result?.let {
+
+                                            val list: List<String> =
+                                                it.get("collections") as ArrayList<String>
+                                            profiteAdapter.setData(list)
+
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[0]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[1]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[2]))
+
+                                        }
+                                    }
+                                }
+
+                            })
+                    }
                 }
 
             }else{
@@ -43,7 +144,7 @@ class ProfiteFragment : BaseFragment<FragmentProfiteBinding,ProfiteVM>() {
             }
 
         })
-        profiteAdapter= ProfiteAdapter(requireFragmentManager(),requireActivity().lifecycle)
+
         binding.viewPager.apply {
             adapter=profiteAdapter
             offscreenPageLimit=1
@@ -71,7 +172,7 @@ class ProfiteFragment : BaseFragment<FragmentProfiteBinding,ProfiteVM>() {
         })
     }
 
-    override fun getLayoutResId()=R.layout.fragment_profite
+    override fun getLayoutResId()=R.layout.fragment_internet_pockets
 
     override val vm: ProfiteVM
         get() = ViewModelProvider(this).get(ProfiteVM::class.java)

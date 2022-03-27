@@ -28,6 +28,8 @@
             android:id="@+id/cl_main"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_main"
             >
 
@@ -150,22 +152,22 @@
             android:id="@+id/cv_uzmobile"
             android:layout_width="90dp"
             android:layout_height="60dp"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="6dp"
+            android:layout_marginEnd="290dp"
             android:clickable="true"
             android:focusable="true"
             app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cl_main"
-            app:layout_goneMarginStart="16dp"
             app:rippleColor="@color/deep_sky_blue_100"
             >
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_margin="12dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
                 app:srcCompat="@drawable/ic_uzmobile_logo"
                 tools:ignore="ContentDescription"
                 />
@@ -175,22 +177,23 @@
             android:id="@+id/cv_mobiuz"
             android:layout_width="90dp"
             android:layout_height="60dp"
-            android:layout_marginStart="7dp"
             android:layout_marginTop="6dp"
             android:clickable="true"
             android:focusable="true"
             app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.030"
             app:layout_constraintStart_toEndOf="@+id/cv_uzmobile"
             app:layout_constraintTop_toBottomOf="@+id/cl_main"
-            app:layout_goneMarginStart="16dp"
+            app:layout_goneMarginStart="8dp"
             app:rippleColor="@color/alizarin_100"
             >
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_margin="12dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
                 app:srcCompat="@drawable/ic_mobiuz_logo"
                 tools:ignore="ContentDescription"
                 />
@@ -200,11 +203,12 @@
             android:id="@+id/cv_ucell"
             android:layout_width="90dp"
             android:layout_height="60dp"
-            android:layout_marginStart="7dp"
             android:layout_marginTop="6dp"
+            android:layout_marginEnd="108dp"
             android:clickable="true"
             android:focusable="true"
             app:cardCornerRadius="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/cv_mobiuz"
             app:layout_constraintTop_toBottomOf="@+id/cl_main"
             app:layout_goneMarginStart="16dp"
@@ -212,10 +216,10 @@
             >
 
             <ImageView
-                android:layout_width="65dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_margin="12dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
                 app:srcCompat="@drawable/ic_ucell_logo"
                 tools:ignore="ContentDescription"
                 />
@@ -226,22 +230,22 @@
             android:id="@+id/cv_beeline"
             android:layout_width="90dp"
             android:layout_height="60dp"
-            android:layout_marginStart="7dp"
             android:layout_marginTop="6dp"
+            android:layout_marginEnd="17dp"
             android:clickable="true"
             android:focusable="true"
             app:cardCornerRadius="16dp"
-            app:layout_constraintStart_toEndOf="@+id/cv_ucell"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cl_main"
             app:layout_goneMarginStart="16dp"
             app:rippleColor="@color/gorse_100"
             >
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_margin="12dp"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
                 app:srcCompat="@drawable/ic_beeline_logo"
                 tools:ignore="ContentDescription"
                 />
@@ -262,290 +266,6 @@
             tools:listitem="@layout/item_home"
             />
 
-<!--        <ScrollView-->
-<!--            android:id="@+id/scroll"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:layout_marginStart="16dp"-->
-<!--            android:layout_marginTop="400dp"-->
-<!--            android:layout_marginEnd="16dp"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            >-->
-
-<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                android:id="@+id/cl_main_blue"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                >-->
-
-<!--                <com.google.android.material.card.MaterialCardView-->
-<!--                    android:id="@+id/cv_icon_blue"-->
-<!--                    android:layout_width="185dp"-->
-<!--                    android:layout_height="105dp"-->
-<!--                    android:layout_marginTop="24dp"-->
-<!--                    android:clickable="true"-->
-<!--                    android:focusable="true"-->
-<!--                    android:foreground="?android:attr/selectableItemBackgroundBorderless"-->
-<!--                    app:cardCornerRadius="16dp"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toTopOf="parent"-->
-<!--                    app:rippleColor="@color/deep_sky_blue_100"-->
-<!--                    >-->
-
-<!--                    <LinearLayout-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center_horizontal|center_vertical"-->
-<!--                        android:orientation="vertical"-->
-<!--                        tools:ignore="UseCompoundDrawables"-->
-<!--                        >-->
-
-<!--                        <ImageView-->
-<!--                            android:id="@+id/iv_tariflar"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_gravity="center_horizontal"-->
-<!--                            app:srcCompat="@drawable/ic_rate"-->
-<!--                            tools:ignore="ContentDescription"-->
-<!--                            />-->
-
-<!--                        <TextView-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_marginTop="12dp"-->
-<!--                            android:text="@string/tariflar"-->
-<!--                            android:textColor="@color/black"-->
-<!--                            android:textSize="18sp"-->
-<!--                            />-->
-
-<!--                    </LinearLayout>-->
-<!--                </com.google.android.material.card.MaterialCardView>-->
-
-<!--                <com.google.android.material.card.MaterialCardView-->
-<!--                    android:id="@+id/cv_icon_blue2"-->
-<!--                    android:layout_width="185dp"-->
-<!--                    android:layout_height="105dp"-->
-<!--                    android:layout_marginStart="8dp"-->
-<!--                    android:layout_marginTop="24dp"-->
-<!--                    android:clickable="true"-->
-<!--                    android:focusable="true"-->
-<!--                    app:cardCornerRadius="16dp"-->
-<!--                    app:layout_constraintStart_toEndOf="@+id/cv_icon_blue"-->
-<!--                    app:layout_constraintTop_toTopOf="parent"-->
-<!--                    app:rippleColor="@color/deep_sky_blue_100"-->
-<!--                    >-->
-
-<!--                    <LinearLayout-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center_horizontal|center_vertical"-->
-<!--                        android:orientation="vertical"-->
-<!--                        >-->
-
-<!--                        <ImageView-->
-<!--                            android:id="@+id/iv_internet"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_gravity="center_horizontal"-->
-<!--                            app:srcCompat="@drawable/ic_internet_pockets"-->
-<!--                            tools:ignore="ContentDescription"-->
-<!--                            />-->
-
-<!--                        <TextView-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_marginTop="12dp"-->
-<!--                            android:text="@string/internet_paketlar"-->
-<!--                            android:textColor="@color/black"-->
-<!--                            android:textSize="18sp"-->
-<!--                            />-->
-
-
-<!--                    </LinearLayout>-->
-<!--                </com.google.android.material.card.MaterialCardView>-->
-
-<!--                <com.google.android.material.card.MaterialCardView-->
-<!--                    android:id="@+id/cv_icon_blue3"-->
-<!--                    android:layout_width="185dp"-->
-<!--                    android:layout_height="105dp"-->
-<!--                    android:layout_marginTop="16dp"-->
-<!--                    android:clickable="true"-->
-<!--                    android:focusable="true"-->
-<!--                    app:cardCornerRadius="16dp"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toBottomOf="@+id/cv_icon_blue"-->
-<!--                    app:rippleColor="@color/deep_sky_blue_100"-->
-<!--                    >-->
-
-<!--                    <LinearLayout-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center_horizontal|center_vertical"-->
-<!--                        android:orientation="vertical"-->
-<!--                        >-->
-
-<!--                        <ImageView-->
-<!--                            android:id="@+id/iv_minuts"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_gravity="center_horizontal"-->
-<!--                            app:srcCompat="@drawable/ic_call_add"-->
-<!--                            tools:ignore="ContentDescription"-->
-<!--                            />-->
-
-<!--                        <TextView-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_marginTop="12dp"-->
-<!--                            android:text="@string/daqiqalar"-->
-<!--                            android:textColor="@color/black"-->
-<!--                            android:textSize="18sp"-->
-<!--                            />-->
-
-
-<!--                    </LinearLayout>-->
-<!--                </com.google.android.material.card.MaterialCardView>-->
-
-
-<!--                <com.google.android.material.card.MaterialCardView-->
-<!--                    android:id="@+id/cv_icon_blue4"-->
-<!--                    android:layout_width="185dp"-->
-<!--                    android:layout_height="105dp"-->
-<!--                    android:layout_marginStart="8dp"-->
-<!--                    android:layout_marginTop="16dp"-->
-<!--                    android:clickable="true"-->
-<!--                    android:focusable="true"-->
-<!--                    app:cardCornerRadius="16dp"-->
-<!--                    app:layout_constraintStart_toEndOf="@+id/cv_icon_blue3"-->
-<!--                    app:layout_constraintTop_toBottomOf="@+id/cv_icon_blue2"-->
-<!--                    app:rippleColor="@color/deep_sky_blue_100"-->
-<!--                    >-->
-
-<!--                    <LinearLayout-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center_horizontal|center_vertical"-->
-<!--                        android:orientation="vertical"-->
-<!--                        >-->
-
-<!--                        <ImageView-->
-<!--                            android:id="@+id/iv_massage"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_gravity="center_horizontal"-->
-<!--                            app:srcCompat="@drawable/ic_message"-->
-<!--                            tools:ignore="ContentDescription"-->
-<!--                            />-->
-
-<!--                        <TextView-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_marginTop="12dp"-->
-<!--                            android:text="@string/sms_paketlar"-->
-<!--                            android:textColor="@color/black"-->
-<!--                            android:textSize="18sp"-->
-<!--                            />-->
-
-
-<!--                    </LinearLayout>-->
-<!--                </com.google.android.material.card.MaterialCardView>-->
-
-
-<!--                <com.google.android.material.card.MaterialCardView-->
-<!--                    android:id="@+id/cv_icon_blue5"-->
-<!--                    android:layout_width="185dp"-->
-<!--                    android:layout_height="105dp"-->
-<!--                    android:layout_marginTop="16dp"-->
-<!--                    android:layout_marginBottom="24dp"-->
-<!--                    android:clickable="true"-->
-<!--                    android:focusable="true"-->
-<!--                    app:cardCornerRadius="16dp"-->
-<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toBottomOf="@+id/cv_icon_blue3"-->
-<!--                    app:rippleColor="@color/deep_sky_blue_100"-->
-
-<!--                    >-->
-
-<!--                    <LinearLayout-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center_horizontal|center_vertical"-->
-<!--                        android:orientation="vertical"-->
-<!--                        >-->
-
-
-<!--                        <ImageView-->
-<!--                            android:id="@+id/iv_ussd"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_gravity="center_horizontal"-->
-<!--                            app:srcCompat="@drawable/ic_ussd_code"-->
-<!--                            tools:ignore="ContentDescription"-->
-<!--                            />-->
-
-<!--                        <TextView-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_marginTop="12dp"-->
-<!--                            android:text="@string/ussd_kodlar"-->
-<!--                            android:textColor="@color/black"-->
-<!--                            android:textSize="18sp"-->
-<!--                            />-->
-
-
-<!--                    </LinearLayout>-->
-<!--                </com.google.android.material.card.MaterialCardView>-->
-
-
-<!--                <com.google.android.material.card.MaterialCardView-->
-<!--                    android:id="@+id/cv_icon_blue6"-->
-<!--                    android:layout_width="185dp"-->
-<!--                    android:layout_height="105dp"-->
-<!--                    android:layout_marginStart="8dp"-->
-<!--                    android:layout_marginTop="16dp"-->
-<!--                    android:layout_marginBottom="24dp"-->
-<!--                    android:clickable="true"-->
-<!--                    android:focusable="true"-->
-<!--                    app:cardCornerRadius="16dp"-->
-<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                    app:layout_constraintStart_toEndOf="@+id/cv_icon_blue5"-->
-<!--                    app:layout_constraintTop_toBottomOf="@+id/cv_icon_blue4"-->
-<!--                    app:rippleColor="@color/deep_sky_blue_100"-->
-<!--                    >-->
-
-<!--                    <LinearLayout-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center_horizontal|center_vertical"-->
-<!--                        android:orientation="vertical"-->
-<!--                        >-->
-
-<!--                        <ImageView-->
-<!--                            android:id="@+id/iv_services"-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_gravity="center_horizontal"-->
-<!--                            app:srcCompat="@drawable/ic_service"-->
-<!--                            tools:ignore="ContentDescription"-->
-<!--                            />-->
-
-<!--                        <TextView-->
-<!--                            android:layout_width="wrap_content"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_marginTop="12dp"-->
-<!--                            android:text="@string/xizmatlar"-->
-<!--                            android:textColor="@color/black"-->
-<!--                            android:textSize="18sp"-->
-<!--                            />-->
-
-
-<!--                    </LinearLayout>-->
-<!--                </com.google.android.material.card.MaterialCardView>-->
-
-<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
-
-<!--        </ScrollView>-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

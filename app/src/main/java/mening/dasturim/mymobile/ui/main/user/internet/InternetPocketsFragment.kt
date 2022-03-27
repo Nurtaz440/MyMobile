@@ -1,44 +1,154 @@
 package mening.dasturim.mymobile.ui.main.user.internet
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.util.Log
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager2.widget.ViewPager2
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.android.gms.tasks.Task
 import com.google.android.material.tabs.TabLayout
+import com.google.firebase.firestore.DocumentSnapshot
+import com.google.firebase.firestore.FirebaseFirestore
 import mening.dasturim.mymobile.R
-import mening.dasturim.mymobile.databinding.FragmentInternetBinding
 import mening.dasturim.mymobile.databinding.FragmentInternetPocketsBinding
 import mening.dasturim.mymobile.ui.Companies
 import mening.dasturim.mymobile.ui.CompanyState
 import mening.dasturim.mymobile.ui.base.BaseFragment
-import mening.dasturim.mymobile.ui.main.user.internet.internet.InternetVM
+import mening.dasturim.mymobile.utils.ViewUtils
 
 class InternetPocketsFragment : BaseFragment<FragmentInternetPocketsBinding,InternetPocketsVM>() {
-    private lateinit var internetViewPagerAdapter:InternetViewPagerAdapter
+    private lateinit var internetViewPagerAdapter:InternetViewPager
+    private lateinit var firebaseFirestore: FirebaseFirestore
 
     override fun onBound() {
         setUp()
     }
 
     fun setUp(){
+        ViewUtils.fadeIn(binding.progressBar)
+        internetViewPagerAdapter= InternetViewPager(requireFragmentManager(),requireActivity().lifecycle)
+        firebaseFirestore = FirebaseFirestore.getInstance()
 
-        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Kunlik non stop"))
-        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Kunlik paketlar"))
-        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Internet non stop"))
-        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("Internet paketlar"))
-        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("TAS-IX"))
 
         CompanyState.getCompany().observe(this, Observer {
             if (it != null){
                 when(it){
-                    Companies.UZMOBILE -> binding.tabLayout.setSelectedTabIndicatorColor(resources.getColor(R.color.deep_sky_blue_400))
-                    Companies.MOBIUZ -> binding.tabLayout.setSelectedTabIndicatorColor(resources.getColor(R.color.alizarin_700))
-                    Companies.UCELL -> binding.tabLayout.setSelectedTabIndicatorColor(resources.getColor(R.color.vivid_violet_800))
-                    Companies.BEELINE -> binding.tabLayout.setSelectedTabIndicatorColor(resources.getColor(R.color.gorse_600))
+                    Companies.UZMOBILE -> {
+                        binding.tabLayout.setSelectedTabIndicatorColor(resources.getColor(R.color.deep_sky_blue_400))
+                        firebaseFirestore.collection("UzMobile").document("Internet paketlar").get()
+                            .addOnCompleteListener(object : OnCompleteListener<DocumentSnapshot?> {
+                                override fun onComplete(p0: Task<DocumentSnapshot?>) {
+                                    if (p0.isSuccessful) {
+                                        Log.d("Route Fragment", "onComplete: query " + p0)
+                                        ViewUtils.fadeOut(binding.progressBar)
+
+                                        p0.result?.let {
+
+                                            val list: List<String> =
+                                                it.get("collections") as ArrayList<String>
+                                            internetViewPagerAdapter.setData(list)
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[0]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[1]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[2]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[3]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[4]))
+
+                                        }
+                                    }
+                                }
+
+                            })
+
+                    }
+                    Companies.MOBIUZ -> {
+                        binding.tabLayout.setSelectedTabIndicatorColor(resources.getColor(R.color.alizarin_700))
+                        firebaseFirestore.collection("MobiUz").document("Internet paketlar").get()
+                            .addOnCompleteListener(object : OnCompleteListener<DocumentSnapshot?> {
+                                override fun onComplete(p0: Task<DocumentSnapshot?>) {
+                                    if (p0.isSuccessful) {
+                                        Log.d("Route Fragment", "onComplete: query " + p0)
+                                        ViewUtils.fadeOut(binding.progressBar)
+
+                                        p0.result?.let {
+
+                                            val list: List<String> =
+                                                it.get("collections") as ArrayList<String>
+                                            internetViewPagerAdapter.setData(list)
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[0]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[1]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[2]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[3]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[4]))
+
+                                        }
+                                    }
+                                }
+
+                            })
+                    }
+                    Companies.UCELL -> {
+                        binding.tabLayout.setSelectedTabIndicatorColor(resources.getColor(R.color.vivid_violet_800))
+                        firebaseFirestore.collection("Ucell").document("Internet paketlar").get()
+                            .addOnCompleteListener(object : OnCompleteListener<DocumentSnapshot?> {
+                                override fun onComplete(p0: Task<DocumentSnapshot?>) {
+                                    if (p0.isSuccessful) {
+                                        Log.d("Route Fragment", "onComplete: query " + p0)
+                                        ViewUtils.fadeOut(binding.progressBar)
+
+                                        p0.result?.let {
+
+                                            val list: List<String> =
+                                                it.get("collections") as ArrayList<String>
+                                            internetViewPagerAdapter.setData(list)
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[0]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[1]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[2]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[3]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[4]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[5]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[6]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[7]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[8]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[9]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[10]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[11]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[12]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[13]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[14]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[15]))
+
+                                        }
+                                    }
+                                }
+
+                            })
+                    }
+                    Companies.BEELINE -> {
+                        binding.tabLayout.setSelectedTabIndicatorColor(resources.getColor(R.color.gorse_600))
+                        firebaseFirestore.collection("Beeline").document("Internet paketlar").get()
+                            .addOnCompleteListener(object : OnCompleteListener<DocumentSnapshot?> {
+                                override fun onComplete(p0: Task<DocumentSnapshot?>) {
+                                    if (p0.isSuccessful) {
+                                        Log.d("Route Fragment", "onComplete: query " + p0)
+                                        ViewUtils.fadeOut(binding.progressBar)
+
+                                        p0.result?.let {
+
+                                            val list: List<String> =
+                                                it.get("collections") as ArrayList<String>
+                                            internetViewPagerAdapter.setData(list)
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[0]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[1]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[2]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[3]))
+                                            binding.tabLayout.addTab(binding.tabLayout.newTab().setText(list[4]))
+
+                                        }
+                                    }
+                                }
+
+                            })
+                    }
                 }
 
             }else{
@@ -47,7 +157,6 @@ class InternetPocketsFragment : BaseFragment<FragmentInternetPocketsBinding,Inte
             }
 
         })
-        internetViewPagerAdapter= InternetViewPagerAdapter(requireFragmentManager(),requireActivity().lifecycle)
         binding.viewPager.adapter=internetViewPagerAdapter
         binding.viewPager.offscreenPageLimit=1
 
